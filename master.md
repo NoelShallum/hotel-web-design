@@ -114,21 +114,7 @@ The founder wants the numbers worked out before outreach and before the build. S
 
 ## 12. Open questions
 
-These were not covered, so I have not assumed answers.
-
-1. **Brand identity:** logo, colours, tone of voice. (The name is settled; see section 1.)
-2. **Final location** and property.
-3. **Pricing, packages and retreat durations.**
-4. **Booking:** online booking, enquiry-only, or WhatsApp. Payments?
-5. **Target audience:** city professionals, remote workers, international guests, groups?
-6. **Launch timeline** and whether the site is for pre-launch or a live property.
-7. **Café:** open to day visitors, or guests only?
-8. **Website scope:** pages needed (Home, Stay, Retreats, Workshops, Café, Community, Contact, etc.), plus photography or imagery available.
-9. **Contact details and social handles.**
-10. **Practitioner onboarding:** how freelancers apply or are listed.
-11. **Financial targets:** turnover, occupancy and revenue numbers (section 10).
-12. **Partnership route:** self-run, or a tripartite arrangement with a brand like Zostel?
-13. **"The Starch Vaults":** which brand was meant (section 11)?
+Tracked in [questions_log.md](./questions_log.md).
 
 ## 13. Status
 
