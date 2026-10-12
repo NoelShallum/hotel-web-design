@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shivaya Prakriti: An Ananda Kedar Experience</title>
-<meta name="description" content="A wellness retreat, boutique stay and café in the Himalayas. Sound healing, Vedic yoga, naturopathy, craft workshops and long stays.">
-<meta name="theme-color" content="#240046">
+<meta name="description" content="A small wellness retreat, stay and café in the Himalayas. Sound healing, Vedic yoga, craft workshops and stays from a long weekend to a month.">
+<meta name="theme-color" content="#0c130f">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;800&family=Hind:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Noto+Serif+Devanagari:wght@400;500;600&family=Hind:wght@400;500;600;700&family=Kalam:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
+
+<p class="preview-note"><strong>Design preview.</strong> Photography is placeholder (credits in the footer). Anything marked <span class="tbc">TBC</span> is not yet confirmed.</p>
 
 <header class="site-header">
   <div class="wrap bar">
@@ -21,13 +23,14 @@
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul>
-        <li><a href="#stay">Stay</a></li>
+        <li><a href="#plan">Plan your stay</a></li>
         <li><a href="#programmes">Programmes</a></li>
         <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#stay">Stay</a></li>
         <li><a href="#cafe">Café</a></li>
         <li><a href="#community">Community</a></li>
       </ul>
-      <a class="btn btn--dark btn--sm" href="#contact">Enquire</a>
+      <a class="btn btn--ember btn--sm" href="#contact">Enquire</a>
     </nav>
   </div>
 </header>
@@ -35,30 +38,31 @@
 <main id="main">
 
   <!-- Hero -->
-  <section class="hero on-dark" aria-labelledby="hero-title">
-    <div class="wrap hero__grid">
-      <div class="hero__text">
-        <p class="hero__tag">Wellness retreat · Stay · Café · Himalayas</p>
-        <h1 id="hero-title"><span>Shivaya</span><span>Prakriti</span></h1>
-        <p class="deva" lang="hi">शिवाय प्रकृति</p>
-        <p class="note">An Ananda Kedar Experience</p>
-        <p class="lede">Sound healing, Vedic yoga and naturopathy in a small Himalayan stay. Come for a weekend, or stay and work for a month.</p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#contact">Enquire to stay</a>
-          <a class="btn btn--ghost" href="#programmes">See what we offer</a>
-        </div>
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero__img" src="assets/img/photos/hero-bonfire-sunset.jpg" width="2200" height="1238" fetchpriority="high"
+         alt="People sitting in cane chairs around a campfire at dusk on a Himalayan hillside, with string lights, bare trees and mountain ridges under an orange sky.">
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Sound · Yoga · Craft · Café</p>
+      <h1 id="hero-title">Shivaya Prakriti</h1>
+      <p class="deva hero__deva" lang="hi">शिवाय प्रकृति</p>
+      <p class="note">An Ananda Kedar Experience</p>
+      <p class="lede">A small stay in the Himalayas for sound healing, Vedic yoga and making things by hand. Come for a long weekend from Delhi, or stay a month and work from the mountains.</p>
+      <div class="hero__cta">
+        <a class="btn btn--ember" href="#contact">Plan your stay</a>
+        <a class="btn btn--ghost" href="#programmes">See the programmes</a>
       </div>
-      <figure class="frame">
-        <img src="assets/img/campfire-portrait.jpg" width="1182" height="1470" fetchpriority="high"
-             alt="Illustration of people gathered around two campfires in a pine forest at dusk, with tents among the trees.">
-        <figcaption class="tbc">Placeholder image</figcaption>
-      </figure>
+      <ul class="hero__facts">
+        <li>About 480 km from Delhi NCR <span class="tbc">Location TBC</span></li>
+        <li>A long weekend to a month</li>
+        <li>Forest, river, clean air</li>
+      </ul>
     </div>
+    <p class="hero__credit">Placeholder photo</p>
   </section>
 
-  <div class="stripe" aria-hidden="true"></div>
-
-  <!-- Devanagari band, each word with its English -->
+  <!-- Practice band, each word with its English -->
   <div class="band">
     <div class="wrap">
       <ul>
@@ -71,17 +75,16 @@
   </div>
 
   <!-- Idea -->
-  <section class="sec" aria-labelledby="idea-title">
-    <div class="wrap intro__grid">
-      <div class="intro__head">
-        <p class="label">Our idea</p>
-        <p class="deva" lang="hi">जड़ों की ओर</p>
-        <h2 id="idea-title">Back to the roots.</h2>
-      </div>
-      <div class="intro__body">
+  <section class="sec sec--cream" aria-labelledby="idea-title">
+    <div class="wrap intro">
+      <div class="reveal">
+        <div class="sec-head">
+          <div class="head-row"><p class="label">Our idea</p><p class="deva" lang="hi">जड़ों की ओर</p></div>
+          <h2 id="idea-title">Back to the roots.</h2>
+        </div>
         <div class="prose">
-          <p>Shivaya Prakriti is a wellness retreat, a boutique stay and a café in the Himalayas. Healing practice, hands-on making and fresh food sit side by side, among tall trees and beside a river.</p>
-          <p>Come for a weekend of sound healing and yoga, join a workshop, or stay for weeks and work from the mountains. We buy from the villages around us, grow what we can, and want the area to grow with us.</p>
+          <p>Shivaya Prakriti is a small wellness retreat, stay and café in the Himalayas. Healing practice, making things by hand and fresh food sit side by side, among tall trees and beside a river.</p>
+          <p>Come for a long weekend away from the city, or stay for weeks and work from the mountains. We buy from the villages around us, grow what we can, and want the area to grow with us.</p>
         </div>
         <ul class="chips" aria-label="What we care about">
           <li class="chip">Back to the roots</li>
@@ -91,178 +94,232 @@
           <li class="chip">Hands-on creativity</li>
         </ul>
       </div>
+      <figure class="frame reveal">
+        <img src="assets/img/photos/forest-fog.jpg" width="1800" height="1200" loading="lazy" decoding="async"
+             alt="Dark pine forest on a hillside, wrapped in low cloud.">
+      </figure>
     </div>
   </section>
 
-  <div class="stripe" aria-hidden="true"></div>
+  <!-- Plan your stay -->
+  <section class="sec" id="plan" aria-labelledby="plan-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="head-row"><p class="label">Plan your stay</p><p class="deva" lang="hi">आइए</p></div>
+        <h2 id="plan-title">A long weekend, a week, or a month.</h2>
+        <p class="lede">Stay as long as suits you. The practices and workshops are the same; what changes is how deep you go.</p>
+      </div>
+      <div class="plan reveal">
+        <article class="card">
+          <p class="dur">A long weekend</p>
+          <h3>Slow down for a few days</h3>
+          <p>Sound healing, a yoga session, an evening by the fire, and time to do nothing.</p>
+          <p class="meta">Prices and inclusions <span class="tbc">TBC</span></p>
+        </article>
+        <article class="card">
+          <p class="dur">A week</p>
+          <h3>Settle in</h3>
+          <p>Join a workshop, walk by the river, and let the programmes build across the days.</p>
+          <p class="meta">Prices and inclusions <span class="tbc">TBC</span></p>
+        </article>
+        <article class="card">
+          <p class="dur">A month</p>
+          <h3>Work from the mountains</h3>
+          <p>A workstation, clean air and company when you want it. The stay doubles as a place to get work done.</p>
+          <p class="meta">Prices and inclusions <span class="tbc">TBC</span></p>
+        </article>
+      </div>
+      <div class="route reveal">
+        <article class="card">
+          <span class="ico" aria-hidden="true">DEL</span>
+          <div>
+            <h3>From Delhi NCR</h3>
+            <p>About 480 km by road, with the valley branching off at the Aut tunnel. Travel times and transport options <span class="tbc">TBC</span></p>
+          </div>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">INT</span>
+          <div>
+            <h3>From abroad</h3>
+            <p>Fly into Delhi and continue north by road. Pickups, visa notes and paying in foreign currency <span class="tbc">TBC</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- Programmes -->
-  <section class="sec" id="programmes" aria-labelledby="programmes-title">
+  <section class="sec sec--pine" id="programmes" aria-labelledby="programmes-title">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="label">Programmes</p>
-        <p class="deva" lang="hi">आरोग्य कार्यक्रम</p>
-        <h2 id="programmes-title">Wellness programmes</h2>
-        <p class="lede">Practices to slow down, breathe and feel at home in your body. Each one is led by someone who does it for a living.</p>
+      <div class="sec-head reveal">
+        <div class="head-row"><p class="label">Programmes</p><p class="deva" lang="hi">आरोग्य कार्यक्रम</p></div>
+        <h2 id="programmes-title">Practices to slow down with</h2>
+        <p class="lede">Each one is led by someone who practises it. They are here to help you feel at home in your body, not to treat illness.</p>
       </div>
-      <div class="cards cards--2">
-        <article class="card card--dark">
-          <p class="deva" lang="hi">ध्वनि चिकित्सा</p>
-          <h3>Sound healing</h3>
-          <p>Sessions built on sound and vibration, to settle the mind and the body. Led by our founder.</p>
-          <p class="card__meta">Led by the founder</p>
+      <div class="prog reveal">
+        <article class="pcard pcard--feature">
+          <figure class="frame">
+            <img src="assets/img/photos/gong-room.jpg" width="1800" height="1200" loading="lazy" decoding="async"
+                 alt="A meditation room with large gongs and a ring of Tibetan singing bowls on woven mats, lit by candles.">
+          </figure>
+          <div class="pcard__body">
+            <p class="deva" lang="hi">ध्वनि चिकित्सा</p>
+            <h3>Sound healing</h3>
+            <p>Sessions built on sound and vibration, to settle the mind and the body. Led by our founder.</p>
+            <p class="meta">Led by the founder</p>
+          </div>
         </article>
-        <article class="card">
-          <p class="deva" lang="hi">वैदिक योग</p>
-          <h3>Vedic yoga</h3>
-          <p>Practice rooted in the Vedic tradition, guided by a yoga practitioner. Our founder also hosts sessions.</p>
-          <p class="card__meta">With a practitioner</p>
+        <article class="pcard pcard--tall">
+          <figure class="frame">
+            <img src="assets/img/photos/yoga-ridge.jpg" width="1600" height="1200" loading="lazy" decoding="async"
+                 alt="A person in a yoga lunge on a rocky ridge, with snow-capped mountains behind.">
+          </figure>
+          <div class="pcard__body">
+            <p class="deva" lang="hi">वैदिक योग</p>
+            <h3>Vedic yoga</h3>
+            <p>Practice rooted in the Vedic tradition, guided by a yoga practitioner. Our founder also hosts sessions.</p>
+            <p class="meta">With a practitioner</p>
+          </div>
         </article>
-        <article class="card">
-          <p class="deva" lang="hi">प्राकृतिक चिकित्सा</p>
-          <h3>Naturopathy</h3>
-          <p>Naturopathic healing, guided by a professional practitioner.</p>
-          <p class="card__meta">With a professional practitioner</p>
+        <article class="pcard">
+          <div class="pcard__body">
+            <p class="deva" lang="hi">प्राकृतिक चिकित्सा</p>
+            <h3>Naturopathy</h3>
+            <p>Naturopathic healing, guided by a professional practitioner.</p>
+            <p class="meta">With a professional practitioner</p>
+          </div>
         </article>
-        <article class="card">
-          <p class="deva" lang="hi">समुदाय</p>
-          <h3>A healing community</h3>
-          <p>We host freelance practitioners at the stay, so the circle of healers around it grows over time.</p>
-          <p class="card__meta">Practitioners welcome</p>
+        <article class="pcard">
+          <div class="pcard__body">
+            <p class="deva" lang="hi">समुदाय</p>
+            <h3>A healing community</h3>
+            <p>We host freelance practitioners at the stay, so the circle of healers around it grows over time.</p>
+            <p class="meta">Practitioners welcome</p>
+          </div>
         </article>
       </div>
-      <p class="sec-foot">
+      <p class="sec-foot reveal">
         <span class="tbc">TBC</span>
         <span>Schedules, retreat lengths and prices. These programmes support wellbeing and do not replace medical care.</span>
       </p>
     </div>
   </section>
 
-  <div class="stripe" aria-hidden="true"></div>
-
   <!-- Workshops -->
-  <section class="sec sec--indigo on-dark" id="workshops" aria-labelledby="workshops-title">
+  <section class="sec sec--paper" id="workshops" aria-labelledby="workshops-title">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="label">Workshops</p>
-        <p class="deva" lang="hi">कार्यशाला</p>
+      <div class="sec-head reveal">
+        <div class="head-row"><p class="label">Workshops</p><p class="deva" lang="hi">कार्यशाला</p></div>
         <h2 id="workshops-title">Make something with your hands</h2>
         <p class="lede">Hands-on sessions for guests who like to work with their hands. Join one, or build a stay around them.</p>
       </div>
-      <div class="cards cards--3">
-        <article class="card">
-          <p class="deva" lang="hi">मिट्टी शिल्प</p>
-          <h3>Clay modelling</h3>
-          <p>Shape pots and objects from clay.</p>
-        </article>
-        <article class="card">
-          <p class="deva" lang="hi">थाली सजावट</p>
-          <h3>Plate design</h3>
-          <p>Prepare a dish, then design how it is served.</p>
-        </article>
-        <article class="card">
-          <p class="deva" lang="hi">चित्रकला</p>
-          <h3>Painting</h3>
-          <p>Paint, and build something new.</p>
-        </article>
-        <article class="card">
-          <p class="deva" lang="hi">निर्माण</p>
-          <h3>Building</h3>
-          <p>Hands-on construction work on the property.</p>
-        </article>
-        <article class="card">
-          <p class="deva" lang="hi">रेशा शिल्प</p>
-          <h3>Hemp craft</h3>
-          <p>Craft with hemp and make products from it.</p>
-        </article>
-        <article class="card">
-          <p class="deva" lang="hi">कचरे से कला</p>
-          <h3>Upcycling</h3>
-          <p>Turn the waste we generate on site into something useful.</p>
-        </article>
+      <div class="wk">
+        <ul class="wk__list reveal">
+          <li><span class="deva" lang="hi">मिट्टी शिल्प</span><span><strong>Clay modelling</strong><span class="d">Shape pots and objects from clay.</span></span></li>
+          <li><span class="deva" lang="hi">थाली सजावट</span><span><strong>Plate design</strong><span class="d">Prepare a dish, then design how it is served.</span></span></li>
+          <li><span class="deva" lang="hi">चित्रकला</span><span><strong>Painting</strong><span class="d">Paint, and build something new.</span></span></li>
+          <li><span class="deva" lang="hi">निर्माण</span><span><strong>Building</strong><span class="d">Hands-on construction work on the property.</span></span></li>
+          <li><span class="deva" lang="hi">रेशा शिल्प</span><span><strong>Hemp craft</strong><span class="d">Craft with hemp and make products from it.</span></span></li>
+          <li><span class="deva" lang="hi">कचरे से कला</span><span><strong>Upcycling</strong><span class="d">Turn the waste we generate on site into something useful.</span></span></li>
+        </ul>
+        <div class="mosaic reveal">
+          <figure class="frame m1"><img src="assets/img/photos/clay-wheel-dark.jpg" width="1400" height="2100" loading="lazy" decoding="async" alt="A weathered hand shaping spinning clay on a pottery wheel."></figure>
+          <figure class="frame m2"><img src="assets/img/photos/clay-hands.jpg" width="1024" height="714" loading="lazy" decoding="async" alt="Two pairs of hands guiding a pot on a pottery wheel."></figure>
+          <figure class="frame m3"><img src="assets/img/photos/wool-spools.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="A ball of dark wool and spools of thread on a wooden loom bench."></figure>
+          <figure class="frame m4"><img src="assets/img/photos/loom.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="Hands weaving a textile on a wooden loom."></figure>
+          <figure class="frame m5"><img src="assets/img/photos/carved-balcony.jpg" width="1800" height="1205" loading="lazy" decoding="async" alt="A carved wooden balcony with round floral panels on a stone building in Kullu."></figure>
+        </div>
       </div>
-      <div class="vol">
-        <article class="card card--amber">
-          <p class="deva" lang="hi">सेवा</p>
+      <div class="vol reveal">
+        <p class="deva" lang="hi">सेवा</p>
+        <div>
           <h3>Volunteering</h3>
           <p>Prefer to give your time? Volunteer with us and help look after the place and the people around it.</p>
-        </article>
+        </div>
+        <a class="btn btn--ember btn--sm" href="#contact">Ask about volunteering</a>
       </div>
     </div>
   </section>
 
   <!-- Photo band -->
-  <section class="photo" aria-labelledby="photo-title">
-    <img src="assets/img/campfire-wide.jpg" width="1182" height="640" loading="lazy"
-         alt="Wide view of people sitting around a campfire among tall pine trees at dusk.">
-    <span class="tbc">Placeholder image</span>
-    <div class="card">
-      <p class="deva" lang="hi">साथ</p>
-      <h2 id="photo-title">Healing, together.</h2>
-      <p class="note">Tall trees and good company.</p>
+  <section class="pband" aria-labelledby="pband-title">
+    <img src="assets/img/photos/silhouette-fire.jpg" width="1800" height="1011" loading="lazy" decoding="async"
+         alt="Silhouettes of three people around a small fire beside a lake at twilight.">
+    <div class="wrap">
+      <div class="pband__text reveal">
+        <p class="deva" lang="hi">साथ</p>
+        <h2 id="pband-title">Healing, together.</h2>
+        <p class="note">Tall trees and good company.</p>
+      </div>
     </div>
+    <p class="credit">Placeholder photo</p>
   </section>
 
   <!-- Stay -->
-  <section class="sec" id="stay" aria-labelledby="stay-title">
-    <div class="wrap stay__grid">
-      <div class="stay__text">
-        <div class="sec-head sec-head--flush">
-          <p class="label">Stay</p>
-          <p class="deva" lang="hi">ठहरें</p>
-          <h2 id="stay-title">A small stay by the forest and the river</h2>
+  <section class="sec sec--pine" id="stay" aria-labelledby="stay-title">
+    <div class="wrap">
+      <div class="stay">
+        <div class="reveal">
+          <div class="sec-head">
+            <div class="head-row"><p class="label">Stay</p><p class="deva" lang="hi">ठहरें</p></div>
+            <h2 id="stay-title">A small stay by the forest and the river</h2>
+          </div>
+          <div class="prose">
+            <p>Five or six rooms <span class="tbc">TBC</span> set among forest, river and fresh water, with good air quality.</p>
+            <p>Stay a few days for a retreat. Or stay a few weeks and work from the mountains: the stay doubles as a workstation for longer visits.</p>
+          </div>
         </div>
-        <div class="prose">
-          <p>Five or six rooms <span class="tbc">TBC</span> set among forest, river and fresh water, with good air quality.</p>
-          <p>Stay a few days for a retreat. Or stay a few weeks and work from the mountains: the stay doubles as a workstation for longer visits.</p>
+        <div class="card reveal">
+          <p class="label">At a glance</p>
+          <dl class="facts">
+            <div><dt>Rooms</dt><dd>Five to six <span class="tbc">TBC</span></dd></div>
+            <div><dt>Setting</dt><dd>Forest, river and fresh water</dd></div>
+            <div><dt>Air</dt><dd>Clean mountain air</dd></div>
+            <div><dt>Stay for</dt><dd>A long weekend to a month</dd></div>
+            <div><dt>Work</dt><dd>A workstation for remote work</dd></div>
+            <div><dt>Getting here</dt><dd>About 480 km from Delhi NCR, via the Aut tunnel into Tirthan Valley, Himachal Pradesh <span class="tbc">Location TBC</span></dd></div>
+          </dl>
         </div>
       </div>
-      <div class="card">
-        <p class="label">At a glance</p>
-        <dl class="facts">
-          <div><dt>Rooms</dt><dd>Five to six <span class="tbc">TBC</span></dd></div>
-          <div><dt>Setting</dt><dd>Forest, river and fresh water</dd></div>
-          <div><dt>Air</dt><dd>Clean mountain air</dd></div>
-          <div><dt>Stay for</dt><dd>A short retreat or a long stay</dd></div>
-          <div><dt>Work</dt><dd>A workstation for remote work</dd></div>
-          <div><dt>Getting here</dt><dd>About 480 km from Delhi NCR, via the Aut tunnel into Tirthan Valley, Himachal Pradesh <span class="tbc">Location TBC</span></dd></div>
-        </dl>
+      <div class="gallery reveal">
+        <figure class="frame"><img src="assets/img/photos/tirthan-house.jpg" width="1024" height="640" loading="lazy" decoding="async" alt="A house among pines and trees in Tirthan Valley, with mist drifting through the hillside."><figcaption>Tirthan Valley. Photo: Nagarjun, CC BY 2.0</figcaption></figure>
+        <figure class="frame"><img src="assets/img/photos/cabin-night.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="A wooden cabin glowing warmly at night with its doors open."></figure>
+        <figure class="frame"><img src="assets/img/photos/tent-forest.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="A lit tent among dark pine trees under a starry sky."></figure>
       </div>
     </div>
   </section>
 
-  <div class="stripe" aria-hidden="true"></div>
-
   <!-- Café -->
-  <section class="sec" id="cafe" aria-labelledby="cafe-title">
-    <div class="wrap">
-      <div class="cafe">
-        <div class="cafe__text">
-          <p class="deva" lang="hi">रसोई</p>
-          <h2 id="cafe-title">Fresh from the garden and the villages around us.</h2>
-          <p class="note">The café: milk, fruit and vegetables, bought close to home.</p>
-          <ul class="cafe__list">
-            <li>Fresh food, cooked with strict hygiene standards.</li>
-            <li>We grow most of our vegetables here, or buy from local vendors.</li>
-            <li>Open to day visitors? <span class="tbc">TBC</span></li>
-          </ul>
-        </div>
-        <div class="cafe__side">
-          <a class="btn btn--black" href="#contact">Ask about the café</a>
-        </div>
+  <section class="sec sec--cream" id="cafe" aria-labelledby="cafe-title">
+    <div class="wrap cafe">
+      <div class="cafe__imgs reveal">
+        <figure class="frame"><img src="assets/img/photos/masala-chai.jpg" width="1024" height="683" loading="lazy" decoding="async" alt="Two cups of milky masala chai on a woven mat."></figure>
+        <figure class="frame"><img src="assets/img/photos/thali.jpg" width="1800" height="1200" loading="lazy" decoding="async" alt="A steel thali with rice, curry and a crisp papad on a wooden table."></figure>
+      </div>
+      <div class="cafe__text reveal">
+        <p class="deva" lang="hi">रसोई</p>
+        <h2 id="cafe-title">Fresh from the garden and the villages around us.</h2>
+        <p class="note">The café: milk, fruit and vegetables, bought close to home.</p>
+        <ul class="cafe__list">
+          <li>Fresh food, cooked with strict hygiene standards.</li>
+          <li>We grow most of our vegetables here, or buy from local vendors.</li>
+          <li>Open to day visitors? <span class="tbc">TBC</span></li>
+        </ul>
+        <div><a class="btn btn--ink" href="#contact">Ask about the café</a></div>
       </div>
     </div>
   </section>
 
   <!-- Community and sustainability -->
-  <section class="sec sec--amethyst on-dark" id="community" aria-labelledby="community-title">
+  <section class="sec community" id="community" aria-labelledby="community-title">
+    <img src="assets/img/photos/tirthan-smoke.jpg" width="1024" height="640" loading="lazy" decoding="async"
+         alt="Wood smoke drifting through the green hills of Tirthan Valley.">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="label">Community and land</p>
-        <p class="deva" lang="hi">समुदाय</p>
+      <div class="sec-head reveal">
+        <div class="head-row"><p class="label">Community and land</p><p class="deva" lang="hi">समुदाय</p></div>
         <h2 id="community-title">Good for the place we are in</h2>
       </div>
-      <div class="cards cards--2">
+      <div class="cards2 reveal">
         <article class="card">
           <p class="deva" lang="hi">गाँव</p>
           <h3>With the villages</h3>
@@ -275,28 +332,28 @@
         </article>
       </div>
     </div>
+    <p class="credit">Tirthan Valley. Photo: Nagarjun, CC BY 2.0</p>
   </section>
 
-  <div class="stripe" aria-hidden="true"></div>
-
   <!-- Contact -->
-  <section class="sec" id="contact" aria-labelledby="contact-title">
+  <section class="sec contact" id="contact" aria-labelledby="contact-title">
+    <img src="assets/img/photos/lake-camp-stars.jpg" width="2000" height="1242" loading="lazy" decoding="async" alt="">
     <div class="wrap contact__grid">
-      <div class="contact__info">
-        <div class="sec-head sec-head--flush">
-          <p class="label">Contact</p>
-          <p class="deva" lang="hi">संपर्क</p>
-          <h2 id="contact-title">Enquire to stay</h2>
+      <div class="reveal">
+        <div class="sec-head" style="margin-bottom:1.4rem">
+          <div class="head-row"><p class="label">Contact</p><p class="deva" lang="hi">संपर्क</p></div>
+          <h2 id="contact-title">Plan your stay</h2>
         </div>
-        <p class="lede">Tell us what you have in mind: a weekend retreat, a workshop, a long stay, a volunteering stint, or hosting a session as a practitioner.</p>
+        <p class="lede">Tell us what you have in mind: a long weekend, a workshop, a long stay, a volunteering stint, or hosting a session as a practitioner. Writing from abroad is welcome.</p>
         <ul class="contact__list">
           <li><strong>Email</strong> <span class="tbc">TBC</span></li>
           <li><strong>WhatsApp</strong> <span class="tbc">TBC</span></li>
           <li><strong>Instagram</strong> <span class="tbc">TBC</span></li>
+          <li><strong>Reply time</strong> <span class="tbc">TBC</span></li>
         </ul>
       </div>
 
-      <form class="card form" id="enquiry" novalidate>
+      <form class="form reveal" id="enquiry" novalidate>
         <div class="row">
           <div class="field">
             <label for="f-name">Your name</label>
@@ -321,16 +378,24 @@
             </select>
           </div>
           <div class="field">
-            <label for="f-dates">When are you thinking of coming?</label>
-            <input id="f-dates" name="dates" type="text" placeholder="For example, March, or flexible">
+            <label for="f-from">I am travelling from</label>
+            <select id="f-from" name="from">
+              <option>Delhi NCR</option>
+              <option>Elsewhere in India</option>
+              <option>Outside India</option>
+            </select>
           </div>
+        </div>
+        <div class="field">
+          <label for="f-dates">When are you thinking of coming?</label>
+          <input id="f-dates" name="dates" type="text" placeholder="For example, a long weekend in March, or flexible">
         </div>
         <div class="field">
           <label for="f-message">Anything else we should know</label>
           <textarea id="f-message" name="message"></textarea>
         </div>
         <div>
-          <button class="btn btn--primary" type="submit">Send enquiry</button>
+          <button class="btn btn--ember" type="submit">Send enquiry</button>
         </div>
         <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
       </form>
@@ -339,20 +404,20 @@
 
 </main>
 
-<footer class="site-footer on-dark">
-  <div class="dots" aria-hidden="true"></div>
+<footer class="site-footer">
   <div class="wrap">
     <div class="site-footer__grid">
-      <div class="site-footer__brand">
+      <div>
         <a class="brand" href="#top">Shivaya Prakriti</a>
         <p class="deva" lang="hi">शिवाय प्रकृति</p>
         <p class="note">An Ananda Kedar Experience</p>
       </div>
       <nav aria-label="Footer">
         <ul>
-          <li><a href="#stay">Stay</a></li>
+          <li><a href="#plan">Plan your stay</a></li>
           <li><a href="#programmes">Programmes</a></li>
           <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#stay">Stay</a></li>
           <li><a href="#cafe">Café</a></li>
           <li><a href="#community">Community</a></li>
           <li><a href="#contact">Enquire</a></li>
@@ -360,6 +425,28 @@
       </nav>
     </div>
     <p class="site-footer__small">Our programmes support wellbeing and do not replace medical care. © 2026 Shivaya Prakriti.</p>
+    <details class="credits">
+      <summary>Photo credits (placeholder photography)</summary>
+      <ul>
+        <li>People Sitting Around a Bonfire at Sunset. Yashpal singh Kaintura via <a href="https://www.pexels.com/photo/people-sitting-around-a-bonfire-at-sunset-10944911/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Green Pine Trees With Fog. Vladimir Kudinov via <a href="https://www.pexels.com/photo/green-pine-trees-with-fog-105813/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>A Room with Gongs and Tibetan Bowls for Meditation. cottonbro studio via <a href="https://www.pexels.com/photo/a-room-with-gongs-and-tibetan-bowls-for-meditation-5602498/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Man Exercising Yoga in Mountains. abhishek gaur via <a href="https://www.pexels.com/photo/man-exercising-yoga-in-mountains-15501252/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Person Making A Pot. ritesh arya via <a href="https://www.pexels.com/photo/person-making-a-pot-3028959/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Potter learning hands. Rawpixel, public domain via <a href="https://www.rawpixel.com/image/6033526/photo-image-public-domain-hand-person">Rawpixel</a>. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 (public domain)</a>.</li>
+        <li>Old Manali, Manali, India. Rawpixel, public domain via <a href="https://www.rawpixel.com/image/3285997/free-photo-image-sewing-cc0-creative-commons">Rawpixel</a>. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 (public domain)</a>.</li>
+        <li>Hands of Weaver Manufacturing Table Runner on Loom. Karola G via <a href="https://www.pexels.com/photo/hands-of-weaver-manufacturing-table-runner-on-loom-6634704/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Naggar Castle, Kullu, Himachal Pradesh, India. Subhankar Roy via <a href="https://www.pexels.com/photo/naggar-castle-kullu-himachal-pradesh-india-18406578/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Silhouette of Three People Having a Campfire. Valeriy Link via <a href="https://www.pexels.com/photo/silhouette-of-three-people-having-a-campfire-10938245/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Smokey house at Tirthan. Nagarjun via <a href="https://www.flickr.com/photos/64924693@N00/52806863717">Flickr</a>. <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Cropped and colour-graded.</li>
+        <li>Cozy Wooden Cabin at Night with Open Doors. Quang Nguyen Vinh via <a href="https://www.pexels.com/photo/cozy-wooden-cabin-at-night-with-open-doors-30750576/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>A Tent in the Forest at Night. Alexandre Boucher via <a href="https://www.pexels.com/photo/a-tent-in-the-forest-at-night-9043496/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Masala chai, rattan tray. Rawpixel, public domain via <a href="https://www.rawpixel.com/image/5906944/free-masala-chai-rattan-tray-top-view">Rawpixel</a>. <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 (public domain)</a>.</li>
+        <li>Traditional Indian Thali Meal with Naan Bread. Eyes2Soul via <a href="https://www.pexels.com/photo/traditional-indian-thali-meal-with-naan-bread-29148133/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Smoke envelopes Tirthan Valley. Nagarjun via <a href="https://www.flickr.com/photos/64924693@N00/52816325110">Flickr</a>. <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Cropped and colour-graded.</li>
+        <li>Pine Trees Under Starry Night Sky. James Wheeler via <a href="https://www.pexels.com/photo/pine-trees-under-starry-night-sky-1539225/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+      </ul>
+    </details>
   </div>
 </footer>
 

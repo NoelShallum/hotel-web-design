@@ -1,6 +1,8 @@
 # Inspiration research: Indian wellness, Himalayan stays, trek and craft brands
 
-Date: 2026-10-12. Written after the founder set aside the Indian Brutalism direction. This is research to discuss, not a decision.
+Date: 2026-10-12. Written after the founder set aside the Indian Brutalism direction.
+
+**Outcome (same day):** the founder chose **B. Fireside Dusk**, for **Delhi weekenders and international guests**. The mock is built in `site/`. The rest of this document is the research behind that choice.
 
 ## How this was done, and its limits
 

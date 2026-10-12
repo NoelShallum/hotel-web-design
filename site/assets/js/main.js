@@ -9,6 +9,31 @@
   var root = document.documentElement;
   root.classList.add("js");
 
+  // ----- Header turns solid once the page scrolls -----
+  var header = document.querySelector(".site-header");
+  function onScroll() {
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 24);
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // ----- Fade sections in as they arrive -----
+  var reveals = document.querySelectorAll(".reveal");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!("IntersectionObserver" in window) || reduceMotion) {
+    Array.prototype.forEach.call(reveals, function (el) { el.classList.add("is-in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    Array.prototype.forEach.call(reveals, function (el) { io.observe(el); });
+  }
+
   // ----- Mobile menu -----
   var menuBtn = document.getElementById("menu-btn");
   var nav = document.getElementById("site-nav");

@@ -89,9 +89,30 @@ Themes to carry through the site, drawn from the founder's words:
 
 Reference images and links live in [references/](./references/). Current direction, from the first reference: warm, communal and moody, with forest greens, earth browns and amber firelight, set among tall trees. Details in [references/README.md](./references/README.md).
 
-> **Under review (2026-10-12).** The founder has set aside the Indian Brutalism approach. The decisions below are kept as a record but are not current until a new direction is chosen. Research and candidate directions are in [references/inspiration-research.md](./references/inspiration-research.md).
+> **Direction chosen (2026-10-12): Fireside Dusk.** The founder set aside Indian Brutalism and picked Fireside Dusk from the options in [references/inspiration-research.md](./references/inspiration-research.md). The main audience is **Delhi weekenders and international guests**. The list headed "Earlier decisions" further down is the Brutalism record and is superseded.
 
-**Decisions so far (superseded pending a new direction)**
+**Current direction: Fireside Dusk**
+- **Approach:** photography-led and cinematic. Night-forest sections for mood, cream paper sections for reading, ember used sparingly for the main action. The only ornament is a thin inset frame on photos (after Pahari miniature borders) and a small diamond rule. Devanagari is always paired with English.
+- **Audience:** Delhi weekenders and international guests. English first, Devanagari as accent. The page answers "what is it like and how do I get there", and marks anything unknown with a `[TBC]` chip.
+- **Colour:**
+
+  | Role | Name | Hex |
+  |---|---|---|
+  | Dark ground | Night | `#0C130F` |
+  | Dark panels | Pine | `#15241B` |
+  | Light ground | Cream | `#F3E9D6` |
+  | Light ground, alternate | Paper | `#EADDC3` |
+  | Text on light | Ink | `#17231B` |
+  | Secondary text on dark | Mist | `#C2BEAC` |
+  | Main action, fills only | Ember | `#E8762B` |
+  | Highlights and labels on dark | Glow | `#F4A24B` |
+  | Labels and links on light | Coal | `#A63B22` |
+
+  Rules: Ember is never text on cream (2.5:1). Button text is Night on Ember (6.3:1). Cream on Night is 15.6:1. Coal on Cream is 5.3:1.
+- **Type:** Fraunces for display (weights 300 to 500), Noto Serif Devanagari for Devanagari, Hind for body, Kalam only for short handwritten notes. Devanagari is set at the same size as sentence-case Latin with more leading.
+- **Photography:** free placeholder photos for the mock, credited in [site/assets/img/photos/CREDITS.md](./site/assets/img/photos/CREDITS.md). None shows the property. The hero is people around a fire at dusk in the Himalayan foothills. Replace all of it with real photography before launch.
+
+**Earlier decisions (Indian Brutalism, superseded)**
 - **Approach:** "Indian Brutalism": neubrutalist structure (heavy type, thick outlines, hard shadows) with rustic Himachali and Sanskrit cues (Kath-Kuni stone-and-timber banding, Devanagari headlines).
 - **Type (confirmed): Signboard.** Eczar ExtraBold for display (Latin and Devanagari), Hind for body, Kalam for short handwritten notes.
 - **Colour (final): "Sandhya" (संध्या, twilight).** Purples plus two oranges, with ivory and pure black. It follows the 60/30/10 rule:
@@ -165,6 +186,6 @@ Tracked in [questions_log.md](./questions_log.md).
 
 - Transcription parts 1 to 3 received and condensed.
 - More material can be appended to this doc.
-- Design direction is **under review**. Indian Brutalism, the Sandhya palette and the Signboard type were set aside as a package on 2026-10-12. Brand guidelines v1.0 ([references/brand-guidelines.md](./references/brand-guidelines.md)) and **Website v1** ([site/](./site/)) were built on that direction and are on hold, not discarded. The site's content structure and `[TBC]` chips remain useful.
-- Inspiration research done ([references/inspiration-research.md](./references/inspiration-research.md)): five candidate directions and the questions that decide between them.
-- Next step: discuss the directions with the founder, choose one, then rebuild the styling and brand guidelines on it. The open questions, real photography and contact details still apply.
+- Design direction chosen: **Fireside Dusk** (2026-10-12), for Delhi weekenders and international guests. The earlier Brutalism guidelines ([references/brand-guidelines.md](./references/brand-guidelines.md)) are on hold, not discarded.
+- **Website v2** (Fireside Dusk, placeholder photography) built in [site/](./site/). The earlier v1 styling was replaced; its content structure and `[TBC]` chips carried over.
+- Next step: review v2 with the founder, write brand guidelines v2 for Fireside Dusk, replace placeholder photos with real ones, confirm contact details and travel guidance.
