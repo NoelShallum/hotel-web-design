@@ -7,6 +7,8 @@ Style references, inspiration, and links for the Shivaya Prakriti site. Add new 
 | # | Type | Item | Notes |
 |---|------|------|-------|
 | 1 | Image | [campfire-forest-gathering.jpg](./images/campfire-forest-gathering.jpg) | Style reference from the founder. Phone lock-screen screenshot of a campfire gathering in a pine forest. The clock and carrier UI are not part of the reference; the wallpaper is. |
+| 2 | Link | [DesignerUp: popular UI design trends](https://designerup.co/blog/here-are-6-5-of-the-most-popular-ui-design-trends-and-how-to-design-them/) | Source for the neubrutalism brief: heavy bold type, clashing high-contrast colour, thick dark borders, asymmetric blocky layout. The article warns it is polarizing. |
+| 3 | Design | [Shivaya Prakriti Design Direction](https://claude.ai/artifact/4tqZ6sQt8We5WTnGjHhTNn) | Claude design canvas (private link): the "Indian Brutalism" brief, 3 palettes (60/30/10), 3 type pairings, and a mix-and-match playground. |
 
 ## Notes on reference 1
 
