@@ -89,6 +89,16 @@ Themes to carry through the site, drawn from the founder's words:
 
 Reference images and links live in [references/](./references/). Current direction, from the first reference: warm, communal and moody, with forest greens, earth browns and amber firelight, set among tall trees. Details in [references/README.md](./references/README.md).
 
+**Decisions so far**
+- **Approach:** "Indian Brutalism": neubrutalist structure (heavy type, thick outlines, hard shadows) with rustic Himachali and Sanskrit cues (Kath-Kuni stone-and-timber banding, Devanagari headlines).
+- **Type (confirmed): Signboard.** Eczar ExtraBold for display (Latin and Devanagari), Hind for body, Kalam for short handwritten notes.
+- **Colour: vibrant, one option still to choose.** All follow the 60/30/10 rule (60% trust colour, 30% neutral, 10% action colour):
+  - A. Mor Pankh: peacock teal `#0A6F7A`, malai cream `#FFF4D6`, rani pink `#E6177A`.
+  - B. Jamun: plum `#4B1D6E`, cream `#FFF1DC`, turmeric `#FFB400`.
+  - C. Mehendi: emerald `#0E7C4F`, chalk `#FFF5E1`, geru orange `#FF5A1F`.
+  - Ink for outlines and body text is a near-black tuned to each palette.
+- Design canvas with all boards: see [references/README.md](./references/README.md).
+
 ## 10. Business planning and targets
 
 The founder wants the numbers worked out before outreach and before the build. Still to be defined:
