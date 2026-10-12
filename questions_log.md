@@ -5,7 +5,7 @@ Questions that are still unanswered. Answers get moved to the **Answered** list 
 ## Open
 
 ### Brand and design
-1. **Brand identity:** do you have a logo, colour palette and tone of voice? If not, should I propose a direction? (Suggested starting point: earthy Himalayan tones such as forest green, river blue, clay and stone.)
+1. **Brand identity:** a style reference (campfire in a pine forest) is in `references/`. Do you have a logo, colour palette and tone of voice? If not, should I propose a direction? (Suggested starting point: earthy Himalayan tones such as forest green, river blue, clay and stone.)
 2. **Imagery:** what photos or video do you have of the location, or will the site use placeholders for now?
 3. **Contact details and social handles** for the site.
 

@@ -85,6 +85,10 @@ Themes to carry through the site, drawn from the founder's words:
 - Clean air, trees, river
 - Hands-on creativity
 
+### Visual style direction
+
+Reference images and links live in [references/](./references/). Current direction, from the first reference: warm, communal and moody, with forest greens, earth browns and amber firelight, set among tall trees. Details in [references/README.md](./references/README.md).
+
 ## 10. Business planning and targets
 
 The founder wants the numbers worked out before outreach and before the build. Still to be defined:
