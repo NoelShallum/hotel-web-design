@@ -92,12 +92,30 @@ Reference images and links live in [references/](./references/). Current directi
 **Decisions so far**
 - **Approach:** "Indian Brutalism": neubrutalist structure (heavy type, thick outlines, hard shadows) with rustic Himachali and Sanskrit cues (Kath-Kuni stone-and-timber banding, Devanagari headlines).
 - **Type (confirmed): Signboard.** Eczar ExtraBold for display (Latin and Devanagari), Hind for body, Kalam for short handwritten notes.
-- **Colour: vibrant, one option still to choose.** All follow the 60/30/10 rule (60% trust colour, 30% neutral, 10% action colour):
-  - A. Mor Pankh: peacock teal `#0A6F7A`, malai cream `#FFF4D6`, rani pink `#E6177A`.
-  - B. Jamun: plum `#4B1D6E`, cream `#FFF1DC`, turmeric `#FFB400`.
-  - C. Mehendi: emerald `#0E7C4F`, chalk `#FFF5E1`, geru orange `#FF5A1F`.
-  - Ink for outlines and body text is a near-black tuned to each palette.
-- Design canvas with all boards: see [references/README.md](./references/README.md).
+- **Colour (final): "Sandhya" (संध्या, twilight).** Purples plus two oranges, with ivory and pure black. It follows the 60/30/10 rule:
+
+  | Role | Name | Hex |
+  |---|---|---|
+  | 60% Trust | Dark Amethyst | `#240046` |
+  | 60% Trust, secondary | Indigo Velvet | `#5A189A` |
+  | 60% Trust, tertiary | Royal Violet | `#7B2CBF` |
+  | 30% Structure | Ivory white | `#FFFFF0` |
+  | 10% Action | Pumpkin Spice | `#FF6D00` |
+  | 10% Action, highlight | Amber Glow | `#FF9E00` |
+  | Text, outlines, shadows | Black | `#000000` |
+
+  **Rules of use**
+  - One Pumpkin button per screen.
+  - Text on either orange is always black. Never ivory on orange, and never orange text on ivory (2.8:1).
+  - Amber is for highlights on the dark purples.
+  - Violet is for links and icons on ivory, never for text on Amethyst (2.5:1).
+  - Every block gets a 3px black outline and a hard offset shadow.
+  - The Kath-Kuni stripe alternates Indigo and Violet bands separated by black "mortar" lines.
+
+  **Tokens:** `--amethyst:#240046; --indigo:#5A189A; --violet:#7B2CBF; --pumpkin:#FF6D00; --amber:#FF9E00; --ivory:#FFFFF0; --black:#000000;`
+
+  **Caution:** both oranges sit close to saffron, which carries political associations in India today. Next to purple they read as sunset.
+- Earlier palette rounds (Deodar, Neel, Shila, Mor Pankh, Jamun, Mehendi, Shila Vivid) were exploration only. The design canvas with all boards is linked from [references/README.md](./references/README.md).
 
 ## 10. Business planning and targets
 

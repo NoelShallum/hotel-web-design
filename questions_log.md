@@ -4,11 +4,8 @@ Questions that are still unanswered. Answers get moved to the **Answered** list 
 
 ## Open
 
-### Decide next
-0. **Vibrant palette:** A (Mor Pankh), B (Jamun) or C (Mehendi)? See the design canvas in `references/README.md`. My lean: B for contrast and a spiritual feel, or A for a more playful feel.
-
 ### Brand and design
-1. **Brand identity:** a style reference (campfire in a pine forest) is in `references/`. Do you have a logo, colour palette and tone of voice? If not, should I propose a direction? (Suggested starting point: earthy Himalayan tones such as forest green, river blue, clay and stone.)
+1. **Logo and tone of voice:** the palette (Sandhya) and type (Signboard) are settled. Do you have a logo, or should I design a wordmark in Eczar? What tone of voice should the copy use?
 2. **Imagery:** what photos or video do you have of the location, or will the site use placeholders for now?
 3. **Contact details and social handles** for the site.
 
@@ -39,6 +36,6 @@ Questions that are still unanswered. Answers get moved to the **Answered** list 
 ## Answered
 
 - **Type style:** Signboard (Eczar, Hind, Kalam).
-- **Colour direction:** vibrant (three options proposed, pick pending above).
+- **Colour (final):** Sandhya palette: Dark Amethyst `#240046`, Indigo Velvet `#5A189A`, Royal Violet `#7B2CBF`, Pumpkin Spice `#FF6D00`, Amber Glow `#FF9E00`, ivory white `#FFFFF0`, black `#000000`. Details in master.md.
 - **Brand name:** Shivaya Prakriti: An Ananda Kedar Experience.
 - **Repo:** `hotel-web-design`, public, under the personal GitHub account.
