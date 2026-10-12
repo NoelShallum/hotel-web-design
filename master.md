@@ -1,6 +1,6 @@
 # Master Doc: Himalayan Wellness Retreat
 
-Source: founder's voice-note transcription (part 1). This doc condenses everything said so far. Anything not stated by the founder is listed under **Open questions**, not assumed.
+Source: founder's voice-note transcriptions (parts 1 to 3). This doc condenses everything said so far. Anything not stated by the founder is listed under **Open questions**, not assumed.
 
 ## 1. The concept
 
@@ -78,7 +78,34 @@ Themes to carry through the site, drawn from the founder's words:
 - Clean air, trees, river
 - Hands-on creativity
 
-## 9. Open questions
+## 9. Business planning and targets
+
+The founder wants the numbers worked out before outreach and before the build. Still to be defined:
+
+- **Targets:** turnover, occupancy rate, and the revenue or yield we are aiming for.
+- **Promotion plan:** how the business will be marketed.
+- **Outreach prep:** a contact person is to be approached. Before that conversation we need:
+  - the background and context to present,
+  - the parameters and reliable sources for the statistics we will cite.
+
+## 10. Competitor analysis
+
+**Plan:** benchmark against **Zostel** and **The Hosteller**.
+
+**Model they use (tripartite agreement):** the brand takes a property on lease, or works with the owner or investor, and handles marketing, operations and social media. The brand or an investor may fund the build-out. The founder wants to understand this model as a possible route or comparison.
+
+**Figures quoted by the founder (unverified, to be checked against sources):**
+
+| Brand | Occupancy | Break-even |
+|---|---|---|
+| Zostel | 60 to 70% | About 18 months |
+| The Hosteller | About 70% | Not stated |
+
+**To look at:** how much a brand's arrival lifts occupancy in a local area, and what it offers guests.
+
+**Transcription note:** "The Starch Vaults" appeared in the audio once. Because the founder then said "these two brands", it is probably a mis-transcription of Zostel. Please confirm, or tell me if it is a separate brand.
+
+## 11. Open questions
 
 These were not covered, so I have not assumed answers.
 
@@ -92,9 +119,12 @@ These were not covered, so I have not assumed answers.
 8. **Website scope:** pages needed (Home, Stay, Retreats, Workshops, Café, Community, Contact, etc.), plus photography or imagery available.
 9. **Contact details and social handles.**
 10. **Practitioner onboarding:** how freelancers apply or are listed.
+11. **Financial targets:** turnover, occupancy and revenue numbers (section 9).
+12. **Partnership route:** self-run, or a tripartite arrangement with a brand like Zostel?
+13. **"The Starch Vaults":** which brand was meant (section 10)?
 
-## 10. Status
+## 12. Status
 
-- Transcription part 1 received and condensed.
+- Transcription parts 1 to 3 received and condensed.
 - More material can be appended to this doc.
 - Next step: website build-out.
