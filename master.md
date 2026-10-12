@@ -117,6 +117,17 @@ Reference images and links live in [references/](./references/). Current directi
   **Caution:** both oranges sit close to saffron, which carries political associations in India today. Next to purple they read as sunset.
 - Earlier palette rounds (Deodar, Neel, Shila, Mor Pankh, Jamun, Mehendi, Shila Vivid) were exploration only. The design canvas with all boards is linked from [references/README.md](./references/README.md).
 
+### Brand guidelines
+
+Full guidelines (v1.0) are in [references/brand-guidelines.md](./references/brand-guidelines.md). The short version:
+
+- **Wordmark:** "Shivaya Prakriti" in Eczar 800, with the Devanagari line शिवाय प्रकृति and the descriptor in Kalam. A proposal until a logo is supplied.
+- **Colour:** the Sandhya palette above, split 60/30/10. Every text and background pair on the site comes from the approved contrast table.
+- **Type:** Eczar for headlines, Hind for body, Kalam for short notes. Devanagari is always paired with English.
+- **Components:** 3px black outlines, hard offset shadows (no blur, no radius), one Pumpkin button per screen, Kath-Kuni stripe as the only texture. On dark purple surfaces the outline and shadow flip to ivory or Amber.
+- **Imagery:** warm, communal, moody, with real people and natural materials. The campfire reference is a placeholder, not the property.
+- **Voice:** plain, warm, specific. No medical claims. Unconfirmed facts show as an amber `[TBC]` chip instead of invented details.
+
 ## 10. Business planning and targets
 
 The founder wants the numbers worked out before outreach and before the build. Still to be defined:
@@ -152,4 +163,6 @@ Tracked in [questions_log.md](./questions_log.md).
 
 - Transcription parts 1 to 3 received and condensed.
 - More material can be appended to this doc.
-- Next step: website build-out.
+- Design direction, palette and type are final. Brand guidelines v1.0 written ([references/brand-guidelines.md](./references/brand-guidelines.md)).
+- **Website v1** built as a static one-page site in [site/](./site/) (HTML, CSS, a little JavaScript, no build step). Unconfirmed content is marked with `[TBC]` chips.
+- Next step: review v1 with the founder, answer the open questions, swap in real photography and confirm contact details.
