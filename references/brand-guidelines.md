@@ -4,7 +4,7 @@
 
 Version 1.0 · Built from the Sandhya palette, the Signboard type system and the Indian Brutalism direction in [master.md](../master.md). The live reference for the colours and rules is the [design canvas](https://claude.ai/artifact/4tqZ6sQt8We5WTnGjHhTNn) (final board: "FINAL palette: Sandhya").
 
-**Status of this document:** the palette, type and component rules are decided. The wordmark and the tone of voice are proposals until the founder confirms them (see [questions_log.md](../questions_log.md), question 1).
+**Status of this document: on hold.** On 2026-10-12 the founder set aside the Indian Brutalism direction, so the palette, type and component rules below are no longer current. They are kept as a record. A replacement will follow once a new direction is chosen (see [inspiration-research.md](./inspiration-research.md)).
 
 ---
 

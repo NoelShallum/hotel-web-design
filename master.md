@@ -89,7 +89,9 @@ Themes to carry through the site, drawn from the founder's words:
 
 Reference images and links live in [references/](./references/). Current direction, from the first reference: warm, communal and moody, with forest greens, earth browns and amber firelight, set among tall trees. Details in [references/README.md](./references/README.md).
 
-**Decisions so far**
+> **Under review (2026-10-12).** The founder has set aside the Indian Brutalism approach. The decisions below are kept as a record but are not current until a new direction is chosen. Research and candidate directions are in [references/inspiration-research.md](./references/inspiration-research.md).
+
+**Decisions so far (superseded pending a new direction)**
 - **Approach:** "Indian Brutalism": neubrutalist structure (heavy type, thick outlines, hard shadows) with rustic Himachali and Sanskrit cues (Kath-Kuni stone-and-timber banding, Devanagari headlines).
 - **Type (confirmed): Signboard.** Eczar ExtraBold for display (Latin and Devanagari), Hind for body, Kalam for short handwritten notes.
 - **Colour (final): "Sandhya" (संध्या, twilight).** Purples plus two oranges, with ivory and pure black. It follows the 60/30/10 rule:
@@ -163,6 +165,6 @@ Tracked in [questions_log.md](./questions_log.md).
 
 - Transcription parts 1 to 3 received and condensed.
 - More material can be appended to this doc.
-- Design direction, palette and type are final. Brand guidelines v1.0 written ([references/brand-guidelines.md](./references/brand-guidelines.md)).
-- **Website v1** built as a static one-page site in [site/](./site/) (HTML, CSS, a little JavaScript, no build step). Unconfirmed content is marked with `[TBC]` chips.
-- Next step: review v1 with the founder, answer the open questions, swap in real photography and confirm contact details.
+- Design direction is **under review**. Indian Brutalism, the Sandhya palette and the Signboard type were set aside as a package on 2026-10-12. Brand guidelines v1.0 ([references/brand-guidelines.md](./references/brand-guidelines.md)) and **Website v1** ([site/](./site/)) were built on that direction and are on hold, not discarded. The site's content structure and `[TBC]` chips remain useful.
+- Inspiration research done ([references/inspiration-research.md](./references/inspiration-research.md)): five candidate directions and the questions that decide between them.
+- Next step: discuss the directions with the founder, choose one, then rebuild the styling and brand guidelines on it. The open questions, real photography and contact details still apply.
