@@ -11,11 +11,415 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Noto+Serif+Devanagari:wght@400;500;600&family=Hind:wght@400;500;600;700&family=Kalam:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/journey.css">
+<script>
+  /* Decide before first paint whether the guided journey opens, so the page never flashes.
+     It opens on a first visit to the bare address, or when a link asks for it
+     (?journey=1, #journey, ?path=stay). It stays closed after a visitor skips or finishes it,
+     when the link points at a section (#cafe), or with ?journey=0. */
+  (function () {
+    var d = document.documentElement, q = location.search, h = location.hash, open;
+    d.classList.add("js");
+    if (/[?&]journey=0/.test(q)) return;
+    open = /[?&](journey=1|path=)/.test(q) || h === "#journey";
+    if (!open && !h) {
+      try { open = !(JSON.parse(localStorage.getItem("sp-journey") || "{}").closed); } catch (e) { open = true; }
+    }
+    if (!open) return;
+    d.classList.add("journey-open");
+    // Hold the first screen back until its animation starts. A ?path= link opens on its own step,
+    // so the intro is held back entirely rather than flashing first.
+    d.classList.add(/[?&]path=/.test(q) ? "j-deep" : "j-arrive");
+    // If journey.js failed to load, never leave a dead overlay over the site
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.SPJourney) d.classList.remove("journey-open", "j-arrive", "j-deep");
+    });
+  })();
+</script>
 </head>
 <body id="top">
+
+<!-- ============================================================
+     The journey: a short guided opening, one question per screen.
+     Copy lives here; the flow lives in assets/js/journey.js.
+     ============================================================ -->
+<div class="journey" id="journey" role="dialog" aria-modal="true" aria-labelledby="j-q-intro">
+  <div class="j-bg" aria-hidden="true">
+    <div class="j-scene j-scene--fire is-on" data-scene="fire">
+      <video class="j-video" muted playsinline loop preload="none"
+             poster="assets/video/fire-dusk-wide.jpg"
+             data-wide="assets/video/fire-dusk-wide.mp4" data-tall="assets/video/fire-dusk-tall.mp4"
+             data-poster-tall="assets/video/fire-dusk-tall.jpg"></video>
+    </div>
+  </div>
+  <canvas class="j-embers" aria-hidden="true"></canvas>
+  <div class="j-shade" aria-hidden="true"></div>
+
+  <div class="j-bar">
+    <p class="j-brand">Shivaya Prakriti <span class="deva" lang="hi">शिवाय प्रकृति</span></p>
+    <div class="j-tools">
+      <button type="button" class="j-tool j-sound" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z"/><path class="j-sound__wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="j-sound__x" d="M16 10l4 4M20 10l-4 4"/></svg>
+        <span class="j-sound__label">Sound off</span>
+      </button>
+      <button type="button" class="j-tool" data-j-exit="skip">Skip<span class="j-wide"> to the full site</span></button>
+    </div>
+  </div>
+  <p class="j-hint" aria-hidden="true">Better with sound</p>
+  <div class="j-progress" aria-hidden="true"><span></span></div>
+
+  <div class="j-stage">
+
+    <!-- 1. The opening question -->
+    <section class="j-step j-step--intro" data-step="intro" data-scene="fire" aria-labelledby="j-q-intro">
+      <div class="j-copy">
+        <p class="j-lead" data-seq="1">Dusk in the Himalayas. The fire is lit, and somewhere below you is the river.</p>
+        <h2 class="j-q" id="j-q-intro" data-seq="2" tabindex="-1">What has the city been keeping you from?</h2>
+        <p class="j-sub" data-seq="3">Pick one to begin. It takes about two minutes, and you can skip to the full site at any time.</p>
+      </div>
+      <ul class="j-cards">
+        <li style="--i:0"><button type="button" class="j-card" data-answer="need" data-value="stay" data-scene="stay">
+          <img src="assets/img/thumbs/cabin-night.jpg" alt="" width="960" height="640">
+          <span class="j-card__n" aria-hidden="true">01</span>
+          <span class="j-card__txt"><span class="j-card__t">Sleep, and a quiet room</span><span class="j-card__s">Rooms by the forest and the river</span></span>
+        </button></li>
+        <li style="--i:1"><button type="button" class="j-card" data-answer="need" data-value="sound" data-scene="sound">
+          <img src="assets/img/thumbs/gong-room.jpg" alt="" width="960" height="640" style="object-position:38% 50%">
+          <span class="j-card__n" aria-hidden="true">02</span>
+          <span class="j-card__txt"><span class="j-card__t">Music that isn't traffic</span><span class="j-card__s">Sound healing, and music by the fire</span></span>
+        </button></li>
+        <li style="--i:2"><button type="button" class="j-card" data-answer="need" data-value="yoga" data-scene="yoga">
+          <img src="assets/img/thumbs/yoga-ridge.jpg" alt="" width="854" height="640" style="object-position:42% 50%">
+          <span class="j-card__n" aria-hidden="true">03</span>
+          <span class="j-card__txt"><span class="j-card__t">Room to stretch and breathe</span><span class="j-card__s">Vedic yoga with a practitioner</span></span>
+        </button></li>
+        <li style="--i:3"><button type="button" class="j-card" data-answer="need" data-value="food" data-scene="food">
+          <img src="assets/img/thumbs/thali.jpg" alt="" width="960" height="640">
+          <span class="j-card__n" aria-hidden="true">04</span>
+          <span class="j-card__txt"><span class="j-card__t">Food you know the source of</span><span class="j-card__s">The café, its garden and the villages</span></span>
+        </button></li>
+        <li style="--i:4"><button type="button" class="j-card" data-answer="need" data-value="craft" data-scene="craft">
+          <img src="assets/img/thumbs/clay-wheel-dark.jpg" alt="" width="426" height="640">
+          <span class="j-card__n" aria-hidden="true">05</span>
+          <span class="j-card__txt"><span class="j-card__t">Making things with my hands</span><span class="j-card__s">Clay, hemp, paint and more</span></span>
+        </button></li>
+      </ul>
+      <div class="j-alt">
+        <p class="j-resume" hidden><button type="button" class="btn btn--ghost btn--sm" data-j-resume>Pick up where you left off</button></p>
+        <button type="button" class="j-link" data-j-exit="looking">I'm just looking around</button>
+        <button type="button" class="j-link" data-j-goto="host">I'm a practitioner, artist or volunteer</button>
+      </div>
+    </section>
+
+    <!-- 2. Who -->
+    <section class="j-step" data-step="who" data-scene="who" aria-labelledby="j-q-who" hidden>
+      <div class="j-copy">
+        <p class="j-echo" data-echo></p>
+        <h2 class="j-q j-q--md" id="j-q-who" tabindex="-1">Who's coming up with you?</h2>
+      </div>
+      <div class="j-opts">
+        <button type="button" class="j-opt" data-answer="who" data-value="solo"><span class="j-opt__t">Just me</span></button>
+        <button type="button" class="j-opt" data-answer="who" data-value="two"><span class="j-opt__t">Two of us</span></button>
+        <button type="button" class="j-opt" data-answer="who" data-value="family"><span class="j-opt__t">Family or friends</span></button>
+        <button type="button" class="j-opt" data-answer="who" data-value="group"><span class="j-opt__t">A group or a team</span><span class="j-opt__s">Retreats, offsites, celebrations</span></button>
+      </div>
+    </section>
+
+    <!-- 3. How long -->
+    <section class="j-step" data-step="when" data-scene="when" aria-labelledby="j-q-when" hidden>
+      <div class="j-copy">
+        <p class="j-echo" data-echo></p>
+        <h2 class="j-q j-q--md" id="j-q-when" tabindex="-1">How long could you get away for?</h2>
+      </div>
+      <div class="j-opts">
+        <button type="button" class="j-opt" data-answer="length" data-value="weekend"><span class="j-opt__t">A long weekend</span><span class="j-opt__s">Two or three nights</span></button>
+        <button type="button" class="j-opt" data-answer="length" data-value="week"><span class="j-opt__t">About a week</span><span class="j-opt__s">Long enough to settle in</span></button>
+        <button type="button" class="j-opt" data-answer="length" data-value="month"><span class="j-opt__t">A month or more</span><span class="j-opt__s">Work from the mountains</span></button>
+        <button type="button" class="j-opt" data-answer="length" data-value="unsure"><span class="j-opt__t">Not sure yet</span></button>
+      </div>
+    </section>
+
+    <!-- 4a. Chapter: stay -->
+    <section class="j-step" data-step="stay" data-scene="stay" aria-labelledby="j-h-stay" hidden>
+      <div class="j-chapter">
+        <div class="j-story">
+          <div class="j-head-row"><p class="label">Stay</p><p class="deva" lang="hi">ठहरें</p></div>
+          <h2 id="j-h-stay" tabindex="-1">A room among the pines, and nowhere you have to be.</h2>
+          <div class="j-body">
+            <p>Five or six rooms <span class="tbc">TBC</span> set among forest, river and fresh water, with clean mountain air. Come for a retreat, or stay for weeks: the stay doubles as a workstation.</p>
+          </div>
+        </div>
+        <div class="j-panel">
+          <h3 class="j-mini">What would make the room right for you?</h3>
+          <div class="j-opts">
+            <button type="button" class="j-opt" data-answer="room" data-value="view"><span class="j-opt__t">A view of the trees</span></button>
+            <button type="button" class="j-opt" data-answer="room" data-value="desk"><span class="j-opt__t">A desk I can work at</span></button>
+            <button type="button" class="j-opt" data-answer="room" data-value="quiet"><span class="j-opt__t">Quiet, above everything</span></button>
+            <button type="button" class="j-opt" data-answer="room" data-value="warm"><span class="j-opt__t">Warmth on a cold night</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4b. Chapter: sound and music -->
+    <section class="j-step" data-step="sound" data-scene="sound" aria-labelledby="j-h-sound" hidden>
+      <div class="j-chapter">
+        <div class="j-story">
+          <div class="j-head-row"><p class="label">Sound and music</p><p class="deva" lang="hi">ध्वनि चिकित्सा</p></div>
+          <h2 id="j-h-sound" tabindex="-1">Bowls, gongs, and the fire after.</h2>
+          <div class="j-body">
+            <p>Our founder leads sound healing with singing bowls and gongs, to settle the mind and the body. Evenings end with music by the fire <span class="tbc">TBC</span></p>
+          </div>
+          <div class="j-bowl-wrap">
+            <button type="button" class="j-bowl" data-j-bowl aria-label="Strike the singing bowl" aria-describedby="j-bowl-help">
+              <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><ellipse cx="32" cy="26" rx="22" ry="5.5"/><path d="M10 26c1.2 14 10 22 22 22s20.8-8 22-22"/><path d="M23 54h18"/><path d="M45 12l9-7" stroke-width="2.4"/></svg>
+              <i></i><i></i><i></i>
+            </button>
+            <p id="j-bowl-help"><strong>Strike the bowl</strong>Tap it to hear one. It plays a sound.</p>
+          </div>
+        </div>
+        <div class="j-panel">
+          <h3 class="j-mini">Have you tried sound healing before?</h3>
+          <div class="j-opts">
+            <button type="button" class="j-opt" data-answer="soundExp" data-value="new"><span class="j-opt__t">Never</span></button>
+            <button type="button" class="j-opt" data-answer="soundExp" data-value="some"><span class="j-opt__t">Once or twice</span></button>
+            <button type="button" class="j-opt" data-answer="soundExp" data-value="regular"><span class="j-opt__t">It's part of my life</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4c. Chapter: yoga -->
+    <section class="j-step" data-step="yoga" data-scene="yoga" aria-labelledby="j-h-yoga" hidden>
+      <div class="j-chapter">
+        <div class="j-story">
+          <div class="j-head-row"><p class="label">Yoga</p><p class="deva" lang="hi">वैदिक योग</p></div>
+          <h2 id="j-h-yoga" tabindex="-1">Practice, with the mountains for company.</h2>
+          <div class="j-body">
+            <p>Vedic yoga with a practitioner, and sessions hosted by our founder. Wherever your practice is today, you start from there.</p>
+          </div>
+          <div class="j-bowl-wrap">
+            <div class="j-breath" aria-hidden="true"><span></span><em>Breathe in</em><em>Breathe out</em></div>
+            <p>Breathe with the circle for a moment, if you like.</p>
+          </div>
+        </div>
+        <div class="j-panel">
+          <h3 class="j-mini">Where is your practice right now?</h3>
+          <div class="j-opts">
+            <button type="button" class="j-opt" data-answer="yogaExp" data-value="new"><span class="j-opt__t">Brand new to it</span></button>
+            <button type="button" class="j-opt" data-answer="yogaExp" data-value="some"><span class="j-opt__t">On and off</span></button>
+            <button type="button" class="j-opt" data-answer="yogaExp" data-value="daily"><span class="j-opt__t">Most days</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4d. Chapter: food -->
+    <section class="j-step" data-step="food" data-scene="food" aria-labelledby="j-h-food" hidden>
+      <div class="j-chapter">
+        <div class="j-story">
+          <div class="j-head-row"><p class="label">Café</p><p class="deva" lang="hi">रसोई</p></div>
+          <h2 id="j-h-food" tabindex="-1">Food from the garden, and the villages around it.</h2>
+          <div class="j-body">
+            <p>Fresh food, cooked to strict hygiene standards. We grow most of our vegetables here, and buy milk, fruit and vegetables from the villages nearby.</p>
+          </div>
+        </div>
+        <div class="j-panel">
+          <h3 class="j-mini">How do you like to eat?</h3>
+          <div class="j-opts">
+            <button type="button" class="j-opt" data-answer="diet" data-value="veg"><span class="j-opt__t">Vegetarian</span></button>
+            <button type="button" class="j-opt" data-answer="diet" data-value="vegan"><span class="j-opt__t">Vegan</span></button>
+            <button type="button" class="j-opt" data-answer="diet" data-value="all"><span class="j-opt__t">A bit of everything</span></button>
+            <button type="button" class="j-opt" data-answer="diet" data-value="later"><span class="j-opt__t">I'll tell you later</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4e. Chapter: craft -->
+    <section class="j-step" data-step="craft" data-scene="craft" aria-labelledby="j-h-craft" hidden>
+      <div class="j-chapter">
+        <div class="j-story">
+          <div class="j-head-row"><p class="label">Workshops</p><p class="deva" lang="hi">कार्यशाला</p></div>
+          <h2 id="j-h-craft" tabindex="-1">Make something with your hands.</h2>
+          <div class="j-body">
+            <p>Hands-on sessions, from clay to hemp. Join one, or build a stay around them.</p>
+          </div>
+        </div>
+        <div class="j-panel">
+          <h3 class="j-mini">Which ones catch your eye?</h3>
+          <p class="j-sub">Pick any, or none.</p>
+          <div class="j-chips" data-multi="crafts">
+            <button type="button" class="j-chip" aria-pressed="false" data-value="clay">Clay modelling</button>
+            <button type="button" class="j-chip" aria-pressed="false" data-value="plate">Plate design</button>
+            <button type="button" class="j-chip" aria-pressed="false" data-value="paint">Painting</button>
+            <button type="button" class="j-chip" aria-pressed="false" data-value="hemp">Hemp craft</button>
+            <button type="button" class="j-chip" aria-pressed="false" data-value="upcycle">Upcycling</button>
+            <button type="button" class="j-chip" aria-pressed="false" data-value="build">Building</button>
+          </div>
+          <div class="j-actions"><button type="button" class="btn btn--ember" data-j-next>Continue</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Anything else -->
+    <section class="j-step" data-step="more" data-scene="more" aria-labelledby="j-q-more" hidden>
+      <div class="j-copy">
+        <p class="j-echo" data-echo></p>
+        <h2 class="j-q j-q--md" id="j-q-more" tabindex="-1">Anything else while you're up here?</h2>
+        <p class="j-sub">Add as many as you like, or none.</p>
+      </div>
+      <ul class="j-tiles" data-multi="extras">
+        <li><button type="button" class="j-tile" aria-pressed="false" data-value="stay"><img src="assets/img/thumbs/cabin-night.jpg" alt="" width="960" height="640"><span>A quiet room</span></button></li>
+        <li><button type="button" class="j-tile" aria-pressed="false" data-value="sound"><img src="assets/img/thumbs/gong-room.jpg" alt="" width="960" height="640"><span>Sound and music</span></button></li>
+        <li><button type="button" class="j-tile" aria-pressed="false" data-value="yoga"><img src="assets/img/thumbs/yoga-ridge.jpg" alt="" width="854" height="640"><span>Yoga</span></button></li>
+        <li><button type="button" class="j-tile" aria-pressed="false" data-value="food"><img src="assets/img/thumbs/thali.jpg" alt="" width="960" height="640"><span>The café</span></button></li>
+        <li><button type="button" class="j-tile" aria-pressed="false" data-value="craft"><img src="assets/img/thumbs/clay-wheel-dark.jpg" alt="" width="426" height="640"><span>Workshops</span></button></li>
+      </ul>
+      <div class="j-actions"><button type="button" class="btn btn--ember" data-j-next data-label-none="That's everything" data-label-some="Add these">That's everything</button></div>
+    </section>
+
+    <!-- 6. The way here -->
+    <section class="j-step" data-step="from" data-scene="from" aria-labelledby="j-q-from" hidden>
+      <div class="j-from">
+        <div class="j-copy">
+          <p class="j-echo" data-echo></p>
+          <h2 class="j-q j-q--md" id="j-q-from" tabindex="-1">Where would you be setting off from?</h2>
+          <div class="j-opts j-opts--stack">
+            <button type="button" class="j-opt" data-answer="from" data-value="delhi" data-stay><span class="j-opt__t">Delhi NCR</span></button>
+            <button type="button" class="j-opt" data-answer="from" data-value="india" data-stay><span class="j-opt__t">Elsewhere in India</span></button>
+            <button type="button" class="j-opt" data-answer="from" data-value="abroad" data-stay><span class="j-opt__t">Outside India</span></button>
+          </div>
+        </div>
+        <div class="j-route" data-route hidden>
+          <svg viewBox="0 0 320 250" role="img" aria-labelledby="j-route-title">
+            <title id="j-route-title">A sketch of the road north from Delhi to Tirthan Valley</title>
+            <path class="r-ridge" d="M118 64 L146 40 L166 56 L196 22 L222 48 L246 18 L272 44 L300 26 L320 40"/>
+            <path class="r-pre" data-r-pre d="M-6 246 C 4 240, 14 236, 26 232"/>
+            <path class="r-path" data-r-path d="M26 232 C 78 224, 104 206, 132 184 S 176 136, 204 116 S 238 90, 254 72 S 276 50, 292 38"/>
+            <g data-r-nodes></g>
+          </svg>
+          <div class="j-km"><strong data-r-km>0</strong><span>km, more or less</span></div>
+          <p data-r-text></p>
+          <div class="j-actions"><button type="button" class="btn btn--ember" data-j-next>Continue</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. The plan -->
+    <section class="j-step j-step--plan" data-step="plan" data-scene="plan" aria-labelledby="j-h-plan" hidden>
+      <article class="j-postcard">
+        <div class="j-head-row"><p class="label">Your stay, sketched</p><p class="deva" lang="hi">आइए</p></div>
+        <h2 id="j-h-plan" tabindex="-1" data-plan-title>Your stay</h2>
+        <div class="j-postcard__grid">
+          <ul class="j-plan-list" data-plan-list></ul>
+          <div class="j-photos" data-plan-photos></div>
+        </div>
+        <dl class="j-day" data-plan-day></dl>
+        <div class="j-postcard__foot">
+          <p class="note">See you at dusk.</p>
+          <p class="j-small">A sketch, not a booking. Prices, dates and timings <span class="tbc">TBC</span></p>
+        </div>
+      </article>
+      <div class="j-next">
+        <p>Shall we turn this into a real plan?</p>
+        <button type="button" class="btn btn--ember" data-intent="outreach">Yes, get in touch with me</button>
+        <button type="button" class="btn btn--ghost" data-intent="updates">Not yet. Just keep me posted</button>
+      </div>
+    </section>
+
+    <!-- Practitioners, artists and volunteers -->
+    <section class="j-step" data-step="host" data-scene="host" aria-labelledby="j-h-host" hidden>
+      <div class="j-chapter">
+        <div class="j-story">
+          <div class="j-head-row"><p class="label">Work with us</p><p class="deva" lang="hi">समुदाय</p></div>
+          <h2 id="j-h-host" tabindex="-1">Bring your practice to the mountains.</h2>
+          <div class="j-body">
+            <p>We host freelance practitioners and makers at the stay, so the circle around it keeps growing: healers, teachers and artists. Volunteers are welcome too.</p>
+          </div>
+        </div>
+        <div class="j-panel">
+          <h3 class="j-mini">What would you bring?</h3>
+          <div class="j-opts">
+            <button type="button" class="j-opt" data-answer="bring" data-value="sound"><span class="j-opt__t">Sound or music</span></button>
+            <button type="button" class="j-opt" data-answer="bring" data-value="movement"><span class="j-opt__t">Yoga or movement</span></button>
+            <button type="button" class="j-opt" data-answer="bring" data-value="healing"><span class="j-opt__t">Naturopathy or bodywork</span></button>
+            <button type="button" class="j-opt" data-answer="bring" data-value="craft"><span class="j-opt__t">An art or a craft</span></button>
+            <button type="button" class="j-opt" data-answer="bring" data-value="volunteer"><span class="j-opt__t">My time, as a volunteer</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact -->
+    <section class="j-step" data-step="contact" data-scene="contact" aria-labelledby="j-q-contact" hidden>
+      <div class="j-contact">
+        <div class="j-copy">
+          <p class="j-echo" data-echo></p>
+          <h2 class="j-q j-q--md" id="j-q-contact" tabindex="-1" data-contact-title>Who should we write to?</h2>
+          <p class="j-lead" data-contact-sub></p>
+        </div>
+        <form class="form j-form" id="j-form" novalidate>
+          <div class="field">
+            <label for="j-name">Your name</label>
+            <input id="j-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <fieldset class="j-reach">
+            <legend>Best way to reach you</legend>
+            <div class="j-seg">
+              <input type="radio" id="j-by-email" name="by" value="email" checked><label for="j-by-email">Email</label>
+              <input type="radio" id="j-by-wa" name="by" value="whatsapp"><label for="j-by-wa">WhatsApp</label>
+            </div>
+          </fieldset>
+          <div class="field" data-by="email">
+            <label for="j-email">Email</label>
+            <input id="j-email" name="email" type="email" autocomplete="email" inputmode="email">
+          </div>
+          <div class="field" data-by="whatsapp" hidden>
+            <label for="j-phone">WhatsApp number, with country code</label>
+            <input id="j-phone" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91">
+          </div>
+          <button type="button" class="j-note-toggle" data-j-note aria-expanded="false" aria-controls="j-note-field">Add a note</button>
+          <div class="field" id="j-note-field" hidden>
+            <label for="j-note">Anything else we should know</label>
+            <textarea id="j-note" name="note"></textarea>
+          </div>
+          <label class="j-check" data-news-opt>
+            <input type="checkbox" name="news" value="yes">
+            <span>Also send me news when dates and retreats open. I can unsubscribe at any time.</span>
+          </label>
+          <p class="j-fine" data-consent-line></p>
+          <div><button class="btn btn--ember" type="submit" data-submit>Send</button></div>
+          <p class="form__status" role="status" aria-live="polite" data-j-status></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 9. Thanks -->
+    <section class="j-step" data-step="thanks" data-scene="fire" aria-labelledby="j-q-thanks" hidden>
+      <div class="j-thanks">
+        <p class="j-echo" data-echo></p>
+        <h2 class="j-q" id="j-q-thanks" tabindex="-1" data-thanks-title>Thank you.</h2>
+        <p class="j-lead" data-thanks-text></p>
+        <p class="j-preview" data-j-preview hidden>This is a design preview and is not connected to an inbox yet, so nothing was sent.</p>
+        <div class="j-actions">
+          <button type="button" class="btn btn--ember" data-j-exit="done">Look around the whole place</button>
+          <button type="button" class="j-link" data-j-restart>Start again</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="j-foot">
+    <button type="button" class="j-back" data-j-back hidden>Back</button>
+    <p class="j-foot__note">Placeholder photos and video.<span class="j-wide"> Credits are in the site footer.</span></p>
+  </div>
+</div>
+
 <a class="skip" href="#main">Skip to content</a>
 
-<p class="preview-note"><strong>Design preview.</strong> Photography is placeholder (credits in the footer). Anything marked <span class="tbc">TBC</span> is not yet confirmed.</p>
+<p class="preview-note"><strong>Design preview.</strong> Photography and video are placeholder (credits in the footer). Anything marked <span class="tbc">TBC</span> is not yet confirmed. <a href="?journey=1">Replay the guided journey</a></p>
 
 <header class="site-header">
   <div class="wrap bar">
@@ -50,7 +454,7 @@
       <p class="note">An Ananda Kedar Experience</p>
       <p class="lede">A small stay in the Himalayas for sound healing, Vedic yoga and making things by hand. Come for a long weekend from Delhi, or stay a month and work from the mountains.</p>
       <div class="hero__cta">
-        <a class="btn btn--ember" href="#contact">Plan your stay</a>
+        <a class="btn btn--ember" href="#contact" data-journey-open>Plan your stay</a>
         <a class="btn btn--ghost" href="#programmes">See the programmes</a>
       </div>
       <ul class="hero__facts">
@@ -345,6 +749,7 @@
           <h2 id="contact-title">Plan your stay</h2>
         </div>
         <p class="lede">Tell us what you have in mind: a long weekend, a workshop, a long stay, a volunteering stint, or hosting a session as a practitioner. Writing from abroad is welcome.</p>
+        <p class="contact__guide">Not sure what to ask? <a href="#journey" data-journey-open>Answer a few questions</a> and we'll sketch a stay for you.</p>
         <ul class="contact__list">
           <li><strong>Email</strong> <span class="tbc">TBC</span></li>
           <li><strong>WhatsApp</strong> <span class="tbc">TBC</span></li>
@@ -445,11 +850,13 @@
         <li>Traditional Indian Thali Meal with Naan Bread. Eyes2Soul via <a href="https://www.pexels.com/photo/traditional-indian-thali-meal-with-naan-bread-29148133/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
         <li>Smoke envelopes Tirthan Valley. Nagarjun via <a href="https://www.flickr.com/photos/64924693@N00/52816325110">Flickr</a>. <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>. Cropped and colour-graded.</li>
         <li>Pine Trees Under Starry Night Sky. James Wheeler via <a href="https://www.pexels.com/photo/pine-trees-under-starry-night-sky-1539225/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>.</li>
+        <li>Video: Tranquil bonfire scene at night with stars visible in the sky. Jester J via <a href="https://www.pexels.com/video/nighttime-bonfire-under-starry-sky-36425432/">Pexels</a>. <a href="https://www.pexels.com/license/">Pexels License</a>. Trimmed to a 10-second loop and cropped.</li>
       </ul>
     </details>
   </div>
 </footer>
 
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/journey.js" defer></script>
 </body>
 </html>

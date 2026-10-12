@@ -9,6 +9,21 @@
   var root = document.documentElement;
   root.classList.add("js");
 
+  // Shared with the guided journey (journey.js), so both forms send to the same place.
+  window.SP = {
+    endpoint: ENQUIRY_ENDPOINT,
+    send: function (data) {
+      return fetch(ENQUIRY_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      }).then(function (res) {
+        if (!res.ok) throw new Error("Request failed");
+        return res;
+      });
+    }
+  };
+
   // ----- Header turns solid once the page scrolls -----
   var header = document.querySelector(".site-header");
   function onScroll() {
@@ -113,19 +128,14 @@
       return;
     }
 
-    var data = {};
+    var data = { source: "enquiry-form" };
     Array.prototype.forEach.call(form.elements, function (el) {
       if (el.name) data[el.name] = el.value;
     });
 
     status.textContent = "Sending...";
-    fetch(ENQUIRY_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    })
-      .then(function (res) {
-        if (!res.ok) throw new Error("Request failed");
+    window.SP.send(data)
+      .then(function () {
         form.reset();
         status.textContent = "Thank you, we have your enquiry and will write back.";
       })

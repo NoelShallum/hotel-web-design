@@ -25,3 +25,13 @@ If a photograph shows an identifiable person, the Pexels and Rawpixel licences d
 | `thali.jpg` | [Traditional Indian Thali Meal with Naan Bread](https://www.pexels.com/photo/traditional-indian-thali-meal-with-naan-bread-29148133/) | Eyes2Soul | Pexels | [Pexels License](https://www.pexels.com/license/) | Canada |
 | `tirthan-smoke.jpg` | [Smoke envelopes Tirthan Valley](https://www.flickr.com/photos/64924693@N00/52816325110) | Nagarjun | Flickr | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | Tirthan Valley, Himachal Pradesh |
 | `lake-camp-stars.jpg` | [Pine Trees Under Starry Night Sky](https://www.pexels.com/photo/pine-trees-under-starry-night-sky-1539225/) | James Wheeler | Pexels | [Pexels License](https://www.pexels.com/license/) | Comox Valley, Canada. Mood only |
+
+## Thumbnails
+
+`site/assets/img/thumbs/` holds smaller copies (640px tall) of the photos above, used on the guided journey's cards and plan. Same files, same credits.
+
+## Video
+
+| File | Original | Creator | Source | Licence | Notes |
+|---|---|---|---|---|---|
+| `site/assets/video/fire-dusk-wide.mp4`, `fire-dusk-tall.mp4` and their `.jpg` posters | [Tranquil bonfire scene at night with stars visible in the sky](https://www.pexels.com/video/nighttime-bonfire-under-starry-sky-36425432/) | Jester J | Pexels | [Pexels License](https://www.pexels.com/license/) | Placeholder. The 14.2 MB original is trimmed to a silent 10-second loop, then cropped to a wide (16:9, 1.4 MB) and a tall (9:16, 1.0 MB) version for phones. Location not stated, and not the property. |

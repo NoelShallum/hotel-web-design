@@ -20,10 +20,16 @@ site/
   index.html
   assets/
     css/styles.css      design tokens and all styles
-    js/main.js          mobile menu and enquiry form
+    css/journey.css     the guided journey
+    js/main.js          mobile menu, enquiry form, and the shared send (window.SP)
+    js/journey.js       the guided journey: steps, scenes, sound, plan and lead form
     img/photos/         placeholder photography and CREDITS.md
+    img/thumbs/         small copies for the journey's cards
+    video/              placeholder fire loop, wide and tall
     img/favicon.svg
 ```
+
+**Guided journey.** A full-screen, question-led journey opens in front of the page on a first visit and ends in a lead form. Reasoning, flow, consent and events are in [references/guided-journey.md](./references/guided-journey.md). Useful links: `?journey=1` (always show it), `?journey=0` (never), `?path=stay|sound|yoga|food|craft|host` (straight into one chapter, for campaigns). It never stores names or contact details in the browser.
 
 **Run it locally**
 

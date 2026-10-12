@@ -140,6 +140,17 @@ Reference images and links live in [references/](./references/). Current directi
   **Caution:** both oranges sit close to saffron, which carries political associations in India today. Next to purple they read as sunset.
 - Earlier palette rounds (Deodar, Neel, Shila, Mor Pankh, Jamun, Mehendi, Shila Vivid) were exploration only. The design canvas with all boards is linked from [references/README.md](./references/README.md).
 
+### Website approach: a guided journey (2026-10-13)
+
+The founder's brief:
+- Make the site interactive rather than the usual Home, About, Rooms.
+- Open with an engaging prompt, such as asking visitors who they are or putting a direct question to them. Nothing off-putting or cliché.
+- Hold their attention for a couple of minutes.
+- Guide them by interest: accommodation, music, café and food, yoga.
+- Finish by collecting contact details, either because they ask to be contacted or because they give permission to be pitched.
+
+What was built: a full-screen journey that opens in front of the one-page site on a first visit. It asks "What has the city been keeping you from?", with five answers that map to stay, sound and music, yoga, food and workshops. It then asks a few short questions and draws the road from Delhi. It builds a personal plan and ends with two choices: "Yes, get in touch with me" or "Not yet. Just keep me posted". Practitioners have their own path. The full site is always one tap away. Reasoning, flow, consent, campaign links and the measurement plan are in [references/guided-journey.md](./references/guided-journey.md).
+
 ### Brand guidelines
 
 Full guidelines (v2.0, Fireside Dusk) are in [references/brand-guidelines.md](./references/brand-guidelines.md). The earlier Brutalism version (v1.0) is archived at [references/archive/brand-guidelines-v1-brutalism.md](./references/archive/brand-guidelines-v1-brutalism.md). The short version of v2:
@@ -189,4 +200,5 @@ Tracked in [questions_log.md](./questions_log.md).
 - More material can be appended to this doc.
 - Design direction chosen: **Fireside Dusk** (2026-10-12), for Delhi weekenders and international guests. Brand guidelines v2.0 are written ([references/brand-guidelines.md](./references/brand-guidelines.md)). The Brutalism v1.0 is archived, not discarded.
 - **Website v2** (Fireside Dusk, placeholder photography) built in [site/](./site/). The earlier v1 styling was replaced; its content structure and `[TBC]` chips carried over.
-- Next step: review the site and guidelines with the founder, run the photo shoot from the shot list, get the Hindi reviewed, and confirm contact details and travel guidance.
+- **Guided journey** (2026-10-13) added in front of the site, from the founder's brief on interactivity and lead capture. It uses a placeholder fire video and photos. Leads are not sent anywhere yet ([questions_log.md](./questions_log.md), questions 19 to 26).
+- Next step: review the site, the journey and the guidelines with the founder. Decide where leads go and write the privacy notice. Run the photo shoot from the shot list, get the Hindi reviewed, and confirm contact details and travel guidance.
