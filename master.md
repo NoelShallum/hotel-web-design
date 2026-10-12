@@ -142,14 +142,15 @@ Reference images and links live in [references/](./references/). Current directi
 
 ### Brand guidelines
 
-Full guidelines (v1.0) are in [references/brand-guidelines.md](./references/brand-guidelines.md). The short version:
+Full guidelines (v2.0, Fireside Dusk) are in [references/brand-guidelines.md](./references/brand-guidelines.md). The earlier Brutalism version (v1.0) is archived at [references/archive/brand-guidelines-v1-brutalism.md](./references/archive/brand-guidelines-v1-brutalism.md). The short version of v2:
 
-- **Wordmark:** "Shivaya Prakriti" in Eczar 800, with the Devanagari line शिवाय प्रकृति and the descriptor in Kalam. A proposal until a logo is supplied.
-- **Colour:** the Sandhya palette above, split 60/30/10. Every text and background pair on the site comes from the approved contrast table.
-- **Type:** Eczar for headlines, Hind for body, Kalam for short notes. Devanagari is always paired with English.
-- **Components:** 3px black outlines, hard offset shadows (no blur, no radius), one Pumpkin button per screen, Kath-Kuni stripe as the only texture. On dark purple surfaces the outline and shadow flip to ivory or Amber.
-- **Imagery:** warm, communal, moody, with real people and natural materials. The campfire reference is a placeholder, not the property.
-- **Voice:** plain, warm, specific. No medical claims. Unconfirmed facts show as an amber `[TBC]` chip instead of invented details.
+- **Wordmark:** "Shivaya Prakriti" in Fraunces, with the Devanagari line शिवाय प्रकृति in Noto Serif Devanagari and the descriptor in Kalam. A proposal until a logo is supplied.
+- **Colour:** Night, Pine, Cream, Paper and Ink for grounds and text, with Ember (the main action, fills only), Glow and Coal as accents. Roughly 55 to 60% dark, 30 to 35% light, under 10% fire. Every text and background pair on the page comes from the approved contrast table. Caution: Ember, Cream and a green ground sit close to the flag, so never stack them as bands.
+- **Type:** Fraunces for display, Noto Serif Devanagari for Devanagari, Hind for body, Kalam for short notes. Devanagari is always paired with English, set with extra leading, and needs native review.
+- **Components:** soft edges (14px cards, 10px photo frames, round buttons), hairlines instead of outlines, a thin inset rule on every photo, a diamond bullet, one Ember action per section.
+- **Imagery:** dusk, firelight and warm practical light; people seen from behind or in silhouette; hands at work. Photos are placeholder until the real shoot, and the guidelines include a 12-item shot list and a size spec.
+- **Motion:** film grain, a soft ember glow and sparse embers in the hero, gentle reveals. All of it has a reduced-motion and no-JavaScript fallback.
+- **Voice:** plain, warm, specific, English first. No medical claims. Unconfirmed facts show as a `[TBC]` chip instead of invented details.
 
 ## 10. Business planning and targets
 
@@ -186,6 +187,6 @@ Tracked in [questions_log.md](./questions_log.md).
 
 - Transcription parts 1 to 3 received and condensed.
 - More material can be appended to this doc.
-- Design direction chosen: **Fireside Dusk** (2026-10-12), for Delhi weekenders and international guests. The earlier Brutalism guidelines ([references/brand-guidelines.md](./references/brand-guidelines.md)) are on hold, not discarded.
+- Design direction chosen: **Fireside Dusk** (2026-10-12), for Delhi weekenders and international guests. Brand guidelines v2.0 are written ([references/brand-guidelines.md](./references/brand-guidelines.md)). The Brutalism v1.0 is archived, not discarded.
 - **Website v2** (Fireside Dusk, placeholder photography) built in [site/](./site/). The earlier v1 styling was replaced; its content structure and `[TBC]` chips carried over.
-- Next step: review v2 with the founder, write brand guidelines v2 for Fireside Dusk, replace placeholder photos with real ones, confirm contact details and travel guidance.
+- Next step: review the site and guidelines with the founder, run the photo shoot from the shot list, get the Hindi reviewed, and confirm contact details and travel guidance.

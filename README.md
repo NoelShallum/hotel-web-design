@@ -33,7 +33,7 @@ python3 -m http.server 8000 -d site
 
 Then open http://localhost:8000.
 
-**Style:** Fireside Dusk, for Delhi weekenders and international guests. The direction, palette and type are in [master.md](./master.md). The earlier Brutalism guidelines in [references/brand-guidelines.md](./references/brand-guidelines.md) are on hold, and a Fireside Dusk version is still to write.
+**Style:** Fireside Dusk, for Delhi weekenders and international guests. The rules are in [references/brand-guidelines.md](./references/brand-guidelines.md) (v2.0). The earlier Brutalism guidelines are archived in [references/archive/](./references/archive/).
 
 ## Before launch
 
@@ -42,4 +42,5 @@ Then open http://localhost:8000.
 - Resolve the travel guidance for Delhi and international guests (marked TBC on the page).
 - Have a native Hindi speaker review every Devanagari phrase.
 - Connect the enquiry form. Set `ENQUIRY_ENDPOINT` in `site/assets/js/main.js` once the founder decides how enquiries should arrive. Until then the form validates and sends nothing.
-- Decide the logo or wordmark and the tone of voice, then write brand guidelines v2.
+- Decide the logo or wordmark and the tone of voice, and update the brand guidelines if they change.
+- Run the photo shoot from the shot list in the brand guidelines (section 7.4), and replace the placeholder photos.

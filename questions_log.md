@@ -40,6 +40,6 @@ Questions that are still unanswered. Answers get moved to the **Answered** list 
 - **Target audience (2026-10-12):** Delhi weekenders and international guests.
 - **Type style (superseded):** Signboard (Eczar, Hind, Kalam). Now Fraunces, Noto Serif Devanagari, Hind and Kalam.
 - **Colour (superseded 2026-10-12):** Sandhya palette: Dark Amethyst `#240046`, Indigo Velvet `#5A189A`, Royal Violet `#7B2CBF`, Pumpkin Spice `#FF6D00`, Amber Glow `#FF9E00`, ivory white `#FFFFF0`, black `#000000`. Details in master.md.
-- **Brand guidelines v1.0 (on hold):** written for the Brutalism direction, in references/brand-guidelines.md. A Fireside Dusk version is still to write.
+- **Brand guidelines v2.0:** written for Fireside Dusk, in references/brand-guidelines.md. Wordmark, tone of voice and Devanagari phrases are proposals. The Brutalism v1.0 is archived in references/archive/.
 - **Brand name:** Shivaya Prakriti: An Ananda Kedar Experience.
 - **Repo:** `hotel-web-design`, public, under the personal GitHub account.
