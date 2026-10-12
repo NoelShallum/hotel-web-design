@@ -2,7 +2,14 @@
 
 Source: founder's voice-note transcriptions (parts 1 to 3). This doc condenses everything said so far. Anything not stated by the founder is listed under **Open questions**, not assumed.
 
-## 1. The concept
+## 1. Name
+
+**Shivaya Prakriti: An Ananda Kedar Experience**
+
+- Brand name: Shivaya Prakriti
+- Tagline or descriptor: An Ananda Kedar Experience
+
+## 2. The concept
 
 A wellness retreat, stay, hotel and café in the Himalayas. It combines:
 
@@ -13,20 +20,20 @@ A wellness retreat, stay, hotel and café in the Himalayas. It combines:
 
 **Core idea:** "going back to the roots."
 
-## 2. Location
+## 3. Location
 
 - **Status:** not finalised. The founder is still evaluating options.
 - **Most likely:** Tirthan Valley, Himachal Pradesh.
 - **Access:** the valley branches off at the Aut tunnel, about 480 km from Delhi NCR.
 - The property itself is also not finalised.
 
-## 3. Property
+## 4. Property
 
 - **Rooms:** 5 to 6 minimum.
 - **Setting:** forests, river and fresh water, with good air quality (AQI reported as good).
 - **Use:** short retreats and long stays. Guests can work remotely from the property.
 
-## 4. Programs and offerings
+## 5. Programs and offerings
 
 ### Wellness retreat program
 - **Sound healing therapy**, run by the founder.
@@ -50,25 +57,25 @@ A wellness retreat, stay, hotel and café in the Himalayas. It combines:
 - At some point, devices that show guests the effect of clean air on their bodies. Examples mentioned were measuring carbon dioxide and pollutant exposure from city life versus after time in the mountains.
 - **Timing:** later, not at launch.
 
-## 5. Food and café
+## 6. Food and café
 
 - Fresh food with strong **hygiene SOPs**.
 - Grow most vegetables on site, or buy from local vendors.
 
-## 6. Community and local impact
+## 7. Community and local impact
 
 - Work with nearby villages on their growth and development.
 - Give villages business by buying **milk, silk, fruit and vegetables** from them.
 - Aim to help build up the area, as part of it.
 
-## 7. Sustainability
+## 8. Sustainability
 
 - Sustainability is a core theme.
 - Plastic used day to day must be disposed of properly or **recycled**.
 - On-site waste should be upcycled where possible (ties into the workshops).
 - Grow food locally and buy locally.
 
-## 8. Brand and website themes
+## 9. Brand and website themes
 
 Themes to carry through the site, drawn from the founder's words:
 
@@ -78,7 +85,7 @@ Themes to carry through the site, drawn from the founder's words:
 - Clean air, trees, river
 - Hands-on creativity
 
-## 9. Business planning and targets
+## 10. Business planning and targets
 
 The founder wants the numbers worked out before outreach and before the build. Still to be defined:
 
@@ -88,7 +95,7 @@ The founder wants the numbers worked out before outreach and before the build. S
   - the background and context to present,
   - the parameters and reliable sources for the statistics we will cite.
 
-## 10. Competitor analysis
+## 11. Competitor analysis
 
 **Plan:** benchmark against **Zostel** and **The Hosteller**.
 
@@ -105,11 +112,11 @@ The founder wants the numbers worked out before outreach and before the build. S
 
 **Transcription note:** "The Starch Vaults" appeared in the audio once. Because the founder then said "these two brands", it is probably a mis-transcription of Zostel. Please confirm, or tell me if it is a separate brand.
 
-## 11. Open questions
+## 12. Open questions
 
 These were not covered, so I have not assumed answers.
 
-1. **Name and brand:** property or brand name, logo, colours, tone of voice.
+1. **Brand identity:** logo, colours, tone of voice. (The name is settled; see section 1.)
 2. **Final location** and property.
 3. **Pricing, packages and retreat durations.**
 4. **Booking:** online booking, enquiry-only, or WhatsApp. Payments?
@@ -119,11 +126,11 @@ These were not covered, so I have not assumed answers.
 8. **Website scope:** pages needed (Home, Stay, Retreats, Workshops, Café, Community, Contact, etc.), plus photography or imagery available.
 9. **Contact details and social handles.**
 10. **Practitioner onboarding:** how freelancers apply or are listed.
-11. **Financial targets:** turnover, occupancy and revenue numbers (section 9).
+11. **Financial targets:** turnover, occupancy and revenue numbers (section 10).
 12. **Partnership route:** self-run, or a tripartite arrangement with a brand like Zostel?
-13. **"The Starch Vaults":** which brand was meant (section 10)?
+13. **"The Starch Vaults":** which brand was meant (section 11)?
 
-## 12. Status
+## 13. Status
 
 - Transcription parts 1 to 3 received and condensed.
 - More material can be appended to this doc.
