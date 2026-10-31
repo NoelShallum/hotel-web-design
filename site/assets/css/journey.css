@@ -172,6 +172,7 @@ html.journey-open .journey { display: flex; }
   text-decoration: underline; text-decoration-color: rgba(243, 233, 214, 0.4); text-underline-offset: 5px;
 }
 .j-link:hover { text-decoration-color: var(--glow); }
+a.j-link { display: inline-flex; align-items: center; }
 .j-resume { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .j-resume[hidden] { display: none; }
 
