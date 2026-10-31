@@ -15,6 +15,7 @@ Style references, inspiration, and links for the Shivaya Prakriti site. Add new 
 | 7 | Preview | [Website v2 preview (Fireside Dusk)](https://claude.ai/artifact/7pizoh1aSudqgKfqdvBPQj) | Private link to a rendered copy of `site/`. The repo's `site/` folder is the source of truth. |
 | 8 | Photography | [site/assets/img/photos/CREDITS.md](../site/assets/img/photos/CREDITS.md) | Placeholder photos for the mock, with photographer, source and licence for each. Selected for Fireside Dusk. None shows the property. |
 | 9 | Guidelines (archived) | [archive/brand-guidelines-v1-brutalism.md](./archive/brand-guidelines-v1-brutalism.md) | v1.0, written for the Brutalism direction and Sandhya palette. Kept as a record. |
+| 10 | Feature record | [mountain-trips.md](./mountain-trips.md) | The proposed, vendor-backed mountain trips page: what it says and avoids, the enquiry form and its WhatsApp design, remaining business decisions, activation steps, media rules and how the checks work. |
 
 ## Notes on reference 1
 
