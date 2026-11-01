@@ -74,6 +74,14 @@
     });
   }
 
+  // ----- Preview labels are only true while no inbox is connected -----
+  if (ENQUIRY_ENDPOINT) {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-inactive-preview]"), function (el) { el.hidden = true; });
+  } else {
+    var sendLabel = document.querySelector("[data-send-label]");
+    if (sendLabel) sendLabel.textContent = "Check my enquiry (preview)";
+  }
+
   // ----- Enquiry form -----
   var form = document.getElementById("enquiry");
   var status = document.getElementById("form-status");
@@ -124,7 +132,7 @@
 
     if (!ENQUIRY_ENDPOINT) {
       status.textContent =
-        "Thank you, " + name.value.trim() + ". This preview is not connected to an inbox yet, so nothing was sent.";
+        "Thank you, " + name.value.trim() + ". This preview is not connected to an inbox yet, so nothing was sent and nobody has received your answers.";
       return;
     }
 

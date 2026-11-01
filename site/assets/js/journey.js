@@ -705,7 +705,7 @@
     $("[data-contact-title]").textContent = c.title;
     $("[data-contact-sub]").innerHTML = c.sub;
     $("[data-consent-line]").innerHTML = c.consent;
-    $("[data-submit]").textContent = c.submit;
+    $("[data-submit]").textContent = c.submit + ((window.SP || {}).endpoint ? "" : " (preview)");
     $("[data-news-opt]").hidden = intent() === "updates";
     if (intent() === "host") setNote(true);
     $("[data-j-status]").textContent = "";
@@ -788,12 +788,14 @@
   function finish(data, preview) {
     var first = data.name.split(/\s+/)[0];
     var by = data.contactBy === "whatsapp" ? "on WhatsApp" : "by email";
-    $("[data-thanks-title]").textContent = "Thank you, " + first + ".";
+    $("[data-thanks-title]").textContent = preview ? "Nothing was sent, " + first + "." : "Thank you, " + first + ".";
     $("[data-thanks-text]").innerHTML = {
       outreach: "We'll be in touch " + by + " about your plan. Reply time" + tbc(),
       updates: "We'll let you know " + by + " when dates and retreats open.",
       host: "We'll be in touch " + by + " about your practice. Reply time" + tbc()
     }[data.intent];
+    // A preview has not reached anyone, so it must not promise a reply
+    if (preview) $("[data-thanks-text]").textContent = "Your answers were checked, but this preview is not connected to an inbox, so nobody has received them and nobody will be in touch.";
     $("[data-j-preview]").hidden = !preview;
     state.done = true;
     state.closed = true;

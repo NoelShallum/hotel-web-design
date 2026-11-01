@@ -53,6 +53,16 @@ A wellness retreat, stay, hotel and café in the Himalayas. It combines:
 ### Long stays and workstation
 - Guests stay for longer periods, work remotely, and breathe clean mountain air.
 
+### Mountain trips (proposed, 2026-11-01)
+
+A second, separate offering next to the permanent retreat: short one- and two-night trips arranged with independent vendors for stays, transport and activities. The business does not own the vendors' properties, and the site must not suggest it does.
+
+- **Proposed:** two stay options (one night, two nights). Optional activities: paragliding, sunset viewpoints, local walks, a temple visit. Guided trekking and camping are separate options for discussion.
+- **Transport:** a pickup at Aut, the valley entrance, is the main proposed arrangement. Transport from Delhi is an enquiry option. Neither is part of a price. (The site says "valley entrance" only.)
+- **Enquiries:** direct customers and travel companies or group organisers have separate paths. The form prepares a WhatsApp message that the customer reviews and sends themselves. No payment is taken on the site, and the team confirms availability, itinerary, inclusions and price before any payment.
+- **Not decided:** destination, vendors, itinerary, inclusions, prices, dates, room capacity, meals, cancellation policy, reply time and the WhatsApp number. The site shows these as `[TBC]`.
+- Built as [site/trips.html](./site/trips.html). Full record, remaining decisions and activation steps in [references/mountain-trips.md](./references/mountain-trips.md).
+
 ### Future idea: body impact devices
 - At some point, devices that show guests the effect of clean air on their bodies. Examples mentioned were measuring carbon dioxide and pollutant exposure from city life versus after time in the mountains.
 - **Timing:** later, not at launch.
@@ -201,4 +211,5 @@ Tracked in [questions_log.md](./questions_log.md).
 - Design direction chosen: **Fireside Dusk** (2026-10-12), for Delhi weekenders and international guests. Brand guidelines v2.0 are written ([references/brand-guidelines.md](./references/brand-guidelines.md)). The Brutalism v1.0 is archived, not discarded.
 - **Website v2** (Fireside Dusk, placeholder photography) built in [site/](./site/). The earlier v1 styling was replaced; its content structure and `[TBC]` chips carried over.
 - **Guided journey** (2026-10-13) added in front of the site, from the founder's brief on interactivity and lead capture. It uses a placeholder fire video and photos. Leads are not sent anywhere yet ([questions_log.md](./questions_log.md), questions 19 to 26).
+- **Mountain trips page** (2026-11-01) added as a separate page for a proposed, vendor-backed offering. Enquiries are not open: the WhatsApp number is unset, and the two older forms are labelled as inactive previews. See [references/mountain-trips.md](./references/mountain-trips.md) and [questions_log.md](./questions_log.md), questions 27 to 40.
 - Next step: review the site, the journey and the guidelines with the founder. Decide where leads go and write the privacy notice. Run the photo shoot from the shot list, get the Hindi reviewed, and confirm contact details and travel guidance.

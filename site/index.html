@@ -108,6 +108,7 @@
         <p class="j-resume" hidden><button type="button" class="btn btn--ghost btn--sm" data-j-resume>Pick up where you left off</button></p>
         <button type="button" class="j-link" data-j-exit="looking">I'm just looking around</button>
         <button type="button" class="j-link" data-j-goto="host">I'm a practitioner, artist or volunteer</button>
+        <a class="j-link" href="trips.html">I'm looking for a short mountain trip</a>
       </div>
     </section>
 
@@ -389,6 +390,7 @@
             <span>Also send me news when dates and retreats open. I can unsubscribe at any time.</span>
           </label>
           <p class="j-fine" data-consent-line></p>
+          <p class="form__preview" data-inactive-preview><strong>Inactive preview.</strong> This form is not connected to an inbox yet. Nothing you enter here is sent or received.</p>
           <div><button class="btn btn--ember" type="submit" data-submit>Send</button></div>
           <p class="form__status" role="status" aria-live="polite" data-j-status></p>
         </form>
@@ -433,6 +435,7 @@
         <li><a href="#stay">Stay</a></li>
         <li><a href="#cafe">Café</a></li>
         <li><a href="#community">Community</a></li>
+        <li><a href="trips.html">Mountain trips</a></li>
       </ul>
       <a class="btn btn--ember btn--sm" href="#contact">Enquire</a>
     </nav>
@@ -479,7 +482,7 @@
   </div>
 
   <!-- Idea -->
-  <section class="sec sec--cream" aria-labelledby="idea-title">
+  <section class="sec sec--cream" id="idea" aria-labelledby="idea-title">
     <div class="wrap intro">
       <div class="reveal">
         <div class="sec-head">
@@ -739,6 +742,28 @@
     <p class="credit">Tirthan Valley. Photo: Nagarjun, CC BY 2.0</p>
   </section>
 
+  <!-- Mountain trips: a separate, vendor-backed offering (see trips.html) -->
+  <section class="sec sec--paper" id="trips" aria-labelledby="trips-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="head-row"><p class="label">Mountain trips · Proposed</p></div>
+        <h2 id="trips-title">A night or two in the mountains</h2>
+        <p class="lede">We are also planning short trips, put together with independent stay, transport and activity vendors. They are separate from the retreat above.</p>
+      </div>
+      <div class="cards2 reveal">
+        <article class="card">
+          <h3>Short trips, through vendors</h3>
+          <p>One or two nights, proposed. The properties, vehicles and activity services belong to the vendors, not to Shivaya Prakriti. Destination, prices and dates are <span class="tbc">TBC</span>.</p>
+        </article>
+        <article class="card">
+          <h3>The retreat is a different project</h3>
+          <p>Our own place, still being built, is not part of these trips and cannot be booked yet. Everything above this section is about the retreat.</p>
+        </article>
+      </div>
+      <p class="sec-foot reveal"><a class="btn btn--ink" href="trips.html">See the mountain trips</a></p>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="sec contact" id="contact" aria-labelledby="contact-title">
     <img src="assets/img/photos/lake-camp-stars.jpg" width="2000" height="1242" loading="lazy" decoding="async" alt="">
@@ -759,6 +784,7 @@
       </div>
 
       <form class="form reveal" id="enquiry" novalidate>
+        <p class="form__preview" data-inactive-preview><strong>Inactive preview.</strong> This form is not connected to an inbox yet. Nothing you enter here is sent or received. Asking about a mountain trip instead? Use the <a href="trips.html#enquire">trip enquiry form</a>.</p>
         <div class="row">
           <div class="field">
             <label for="f-name">Your name</label>
@@ -800,7 +826,7 @@
           <textarea id="f-message" name="message"></textarea>
         </div>
         <div>
-          <button class="btn btn--ember" type="submit">Send enquiry</button>
+          <button class="btn btn--ember" type="submit" data-send-label>Send enquiry</button>
         </div>
         <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
       </form>
@@ -825,6 +851,7 @@
           <li><a href="#stay">Stay</a></li>
           <li><a href="#cafe">Café</a></li>
           <li><a href="#community">Community</a></li>
+          <li><a href="trips.html">Mountain trips</a></li>
           <li><a href="#contact">Enquire</a></li>
         </ul>
       </nav>

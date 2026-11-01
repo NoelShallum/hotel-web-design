@@ -304,6 +304,11 @@ The glosses are Claude's and are also unreviewed. Two flags for the reviewer:
 | **Form** | A Cream card (`color-scheme: light`). Fields `#FBF6EA`, 1.5px Ink border at 35%, 10px radius, 3rem high. Label above at 0.86rem, 600. Focus: 2px Coal outline. Error: Coal border, a pale `#FDEEE6` fill and a Coal message below |
 | **Footer** | `#080D0A`, Mist text, Cream links, the wordmark, one line of disclaimer, and a collapsed "Photo credits" list |
 | **Preview ribbon** | A slim Night-violet strip above the header: "Design preview. Photography is placeholder...". Remove it at launch |
+| **Proposal banner** | A slim strip above the header on trips.html, styled like the preview ribbon: "Proposal, not an offer." Says the trips are still being planned and that nothing is a confirmed itinerary, price or booking. Remove or reword it only when the founder has confirmed the offer |
+| **Path cards** | Two radio cards on the trips form (direct, or travel company or group organiser). Hairline Ink border, Coal when selected, with a 2px Coal focus ring. The radio sits inside the card so the whole card is the target |
+| **State pill** | A round pill with a dashed Glow border and a hollow dot while enquiries are not open. When a WhatsApp number is set it turns solid green (`#8FCF9F`) with a filled dot. The text always says which state it is in, so colour never carries the meaning alone |
+| **Media slot** | A 16:9 dashed box, "No photos or video of ... yet." Used for any media group that has nothing. A lone slot becomes a full-width band. Never fill a slot with a stock photo unless it carries the preview badge |
+| **Preview badge** | A Glow pill over the corner of a photo or video: "Preview media, not the actual place". Required on any stand-in media on the trips page |
 
 ---
 
@@ -511,3 +516,4 @@ The same tokens are at the top of [`site/assets/css/styles.css`](../site/assets/
 - **Travel guidance** for Delhi and international guests (question 10).
 - **Pricing, schedules and room count**, so the TBC chips can come out.
 - **Measure the hero text contrast** once the real hero photo is in.
+- **Mountain trips media** ([mountain-trips.md](./mountain-trips.md), section 6): real photos and video for destination, properties, rooms, meals and activities. Until then the page shows labelled empty slots, and its hero is a credited stock photo marked as not the destination.
